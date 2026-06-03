@@ -25,13 +25,13 @@ export function pageMetadata({
       siteName: site.name,
       locale: "it_IT",
       type: "website",
-      images: [{ url: "/images/geodomus-hero.jpg", width: 1792, height: 1024, alt: site.name }]
+      images: [{ url: "/images/villa-geodomus-hero.jpg", width: 1774, height: 887, alt: site.name }]
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/geodomus-hero.jpg"]
+      images: ["/images/villa-geodomus-hero.jpg"]
     }
   };
 }

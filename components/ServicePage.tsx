@@ -42,6 +42,7 @@ export function ServicePage(props: ServicePageProps) {
               alt={props.imageAlt}
               fill
               priority
+              quality={80}
               sizes="(min-width: 1024px) 54vw, 100vw"
               className="object-cover"
             />

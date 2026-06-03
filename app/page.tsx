@@ -67,50 +67,48 @@ const seoBlocks = [
 export default function HomePage() {
   return (
     <main>
-      <section className="relative min-h-screen overflow-hidden bg-warm px-5 pt-28 lg:px-8">
-        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-white to-transparent" aria-hidden="true" />
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.94fr_1.06fr] lg:items-end">
-          <FadeIn className="z-10 pb-10">
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">GeoDomus srls / Udine e Friuli Venezia Giulia</p>
-            <h1 className="mt-5 max-w-4xl text-6xl font-semibold tracking-tight text-graphite md:text-8xl lg:text-9xl">
+      <section className="relative min-h-screen overflow-hidden bg-graphite px-5 pt-28 text-white lg:px-8">
+        <Image
+          src="/images/villa-geodomus-hero.jpg"
+          alt="Villa moderna in legno con pannelli fotovoltaici in Friuli Venezia Giulia"
+          fill
+          priority
+          quality={82}
+          sizes="100vw"
+          className="object-cover object-[66%_center]"
+        />
+        <div className="absolute inset-0 bg-graphite/24" aria-hidden="true" />
+        <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-end pb-10">
+          <FadeIn className="max-w-4xl rounded-lg border border-white/20 bg-graphite/72 p-5 shadow-[0_32px_90px_rgba(0,0,0,.38)] backdrop-blur-sm sm:p-7 lg:p-9">
+            <p className="text-xs font-extrabold uppercase tracking-[.18em] text-[#f2bd83]">GeoDomus srls / Udine e Friuli Venezia Giulia</p>
+            <h1 className="mt-5 max-w-4xl text-6xl font-semibold tracking-tight text-white md:text-8xl lg:text-9xl lg:max-w-5xl">
               Costruire casa. Produrre energia. Vivere meglio.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-graphite/65">
+            <p className="mt-6 max-w-3xl text-lg font-semibold leading-8 text-white">
               Case prefabbricate in legno, impianti fotovoltaici e riscaldamento a biomassa progettati come un unico sistema per abitazioni sostenibili a Udine, provincia di Udine e Friuli Venezia Giulia.
             </p>
-            <p className="mt-4 max-w-2xl leading-8 text-graphite/55">
+            <p className="mt-4 max-w-3xl leading-8 text-white/86">
               Un interlocutore locale per chi vuole costruire una casa efficiente, ridurre i consumi, valorizzare un terreno o riqualificare un immobile con soluzioni energetiche concrete.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-semibold text-white">
+              <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-bold text-graphite shadow-lg shadow-black/25">
                 Richiedi una consulenza
               </Link>
-              <Link href="#soluzioni" className="inline-flex min-h-12 items-center justify-center rounded-md border border-graphite/15 px-6 font-semibold text-graphite">
+              <Link href="#soluzioni" className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/45 bg-white/16 px-6 font-bold text-white backdrop-blur">
                 Scopri le soluzioni
               </Link>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {proofPoints.map((point) => (
-                <div key={point.value} className="rounded-lg border border-graphite/10 bg-white/65 p-4 backdrop-blur">
-                  <strong className="block text-2xl tracking-tight text-forest">{point.value}</strong>
-                  <span className="mt-1 block text-sm leading-5 text-graphite/58">{point.label}</span>
+                <div key={point.value} className="rounded-lg border border-white/24 bg-black/30 p-4">
+                  <strong className="block text-2xl tracking-tight text-[#f2bd83]">{point.value}</strong>
+                  <span className="mt-1 block text-sm font-medium leading-5 text-white/90">{point.label}</span>
                 </div>
               ))}
             </div>
-          </FadeIn>
-          <FadeIn className="relative min-h-[430px] overflow-hidden rounded-lg shadow-soft lg:min-h-[680px]">
-            <Image
-              src="/images/geodomus-hero.jpg"
-              alt="Casa prefabbricata in legno con pannelli fotovoltaici in Friuli Venezia Giulia"
-              fill
-              priority
-              sizes="(min-width: 1024px) 56vw, 100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-graphite/25 to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-white/20 bg-white/78 p-4 text-graphite backdrop-blur-md sm:left-auto sm:w-80">
-              <p className="text-xs font-semibold uppercase tracking-[.16em] text-forest">Sistema integrato</p>
-              <p className="mt-2 text-lg font-semibold leading-tight">Casa in legno + fotovoltaico + biomassa, progettati insieme.</p>
+            <div className="mt-8 max-w-sm rounded-lg border border-white/24 bg-black/30 p-4">
+              <p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#f2bd83]">Sistema integrato</p>
+              <p className="mt-2 text-lg font-semibold leading-tight text-white">Casa in legno + fotovoltaico + biomassa, progettati insieme.</p>
             </div>
           </FadeIn>
         </div>
@@ -141,6 +139,7 @@ export default function HomePage() {
                     src={service.image}
                     alt={service.alt}
                     fill
+                    quality={78}
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover transition duration-700 hover:scale-105"
                   />

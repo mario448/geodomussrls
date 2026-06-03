@@ -53,6 +53,7 @@ export default function IntegratedPage() {
                 src={service.image}
                 alt={service.alt}
                 fill
+                quality={78}
                 sizes="(min-width: 1024px) 33vw, 100vw"
                 className="object-cover"
               />
