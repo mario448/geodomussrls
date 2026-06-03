@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101112">
+    <meta
+      name="description"
+      content="Impresa edile premium in Friuli Venezia Giulia: costruzioni civili, ristrutturazioni, riqualificazione energetica e cantieri ad alta precisione."
+    >
+    <title>Materia FVG | Edilizia moderna in Friuli Venezia Giulia</title>
+    <link rel="preload" as="image" href="assets/hero-blueprint-building.jpg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+    <header class="site-header" aria-label="Navigazione principale">
+      <a class="brand" href="#home" aria-label="Materia FVG Home">
+        <span>Materia</span>
+        <small>FVG</small>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Apri menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="#processo">Processo</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero section-panel" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/hero-blueprint-building.jpg" alt="Edificio contemporaneo che emerge da un blueprint tecnico">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="kicker">Dal progetto alla realtà</p>
+          <h1 id="hero-title">Edilizia moderna, misurata al millimetro.</h1>
+          <p>
+            Una piattaforma esecutiva per costruzioni civili, riqualificazioni energetiche e cantieri complessi in Friuli Venezia Giulia.
+          </p>
+          <div class="hero-actions" aria-label="Azioni principali">
+            <a class="button primary" href="#contatti">Richiedi una consulenza</a>
+            <a class="button ghost" href="#progetti">Esplora i nostri progetti</a>
+          </div>
+        </div>
+        <div class="hero-metrics" aria-label="Metriche principali">
+          <span><strong>28</strong> anni</span>
+          <span><strong>412k</strong> m² costruiti</span>
+          <span><strong>A4</strong> target energetico</span>
+        </div>
+      </section>
+
+      <section id="processo" class="process section-panel">
+        <div class="section-copy reveal">
+          <p class="kicker">Sequenza costruttiva</p>
+          <h2>Il cantiere non viene mostrato. Viene costruito davanti a chi guarda.</h2>
+        </div>
+        <div class="build-stage" aria-label="Fasi dal progetto alla costruzione">
+          <div class="stage-visual" aria-hidden="true">
+            <div class="blueprint-grid"></div>
+            <div class="beam beam-a"></div>
+            <div class="beam beam-b"></div>
+            <div class="beam beam-c"></div>
+            <div class="slab"></div>
+            <div class="facade"></div>
+          </div>
+          <ol class="stage-list">
+            <li class="reveal"><span>01</span><strong>Analisi</strong><p>Rilievo tecnico, budget, vincoli normativi e prestazioni attese.</p></li>
+            <li class="reveal"><span>02</span><strong>Progetto</strong><p>Layout operativo, capitolato, materiali e controllo dei punti critici.</p></li>
+            <li class="reveal"><span>03</span><strong>Cantiere</strong><p>Coordinamento delle squadre, tracciamenti, qualità e sicurezza.</p></li>
+            <li class="reveal"><span>04</span><strong>Consegna</strong><p>Collaudi, documentazione, metriche energetiche e assistenza post intervento.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="dashboard section-panel" aria-labelledby="dashboard-title">
+        <div class="section-copy reveal">
+          <p class="kicker">Dashboard prestazioni</p>
+          <h2 id="dashboard-title">Numeri leggibili, non slogan.</h2>
+        </div>
+        <div class="metric-grid">
+          <article class="metric reveal"><strong data-count="28">0</strong><span>Anni di esperienza</span></article>
+          <article class="metric reveal"><strong data-count="186">0</strong><span>Edifici realizzati</span></article>
+          <article class="metric reveal"><strong data-count="412000">0</strong><span>Metri quadrati costruiti</span></article>
+          <article class="metric reveal"><strong data-count="39">0</strong><span>Risparmio energetico medio %</span></article>
+        </div>
+      </section>
+
+      <section id="progetti" class="projects section-panel" aria-labelledby="projects-title">
+        <div class="section-copy reveal">
+          <p class="kicker">Mappa FVG</p>
+          <h2 id="projects-title">Cantieri, risultati e aree operative in un archivio vivo.</h2>
+        </div>
+        <div class="map-layout">
+          <div class="fvg-map reveal" aria-label="Mappa interattiva dei progetti in Friuli Venezia Giulia">
+            <svg viewBox="0 0 520 360" role="img" aria-labelledby="map-title">
+              <title id="map-title">Mappa stilizzata del Friuli Venezia Giulia</title>
+              <path class="region" d="M70 168 C88 108 151 66 230 75 C287 28 377 52 412 111 C469 117 493 165 463 211 C430 260 364 256 329 304 C285 338 224 302 179 316 C113 333 49 276 70 168Z"></path>
+              <path class="coast" d="M329 304 C361 282 395 279 433 305 C391 332 352 329 329 304Z"></path>
+            </svg>
+            <button class="pin" data-project="trieste" style="--x:77%;--y:72%" aria-label="Apri progetto Trieste"></button>
+            <button class="pin active" data-project="udine" style="--x:51%;--y:46%" aria-label="Apri progetto Udine"></button>
+            <button class="pin" data-project="pordenone" style="--x:25%;--y:54%" aria-label="Apri progetto Pordenone"></button>
+            <button class="pin" data-project="gorizia" style="--x:67%;--y:51%" aria-label="Apri progetto Gorizia"></button>
+          </div>
+          <article class="project-card reveal" aria-live="polite">
+            <p class="kicker" id="project-status">In corso</p>
+            <h3 id="project-title">Campus residenziale Udine Nord</h3>
+            <p id="project-description">Nuovo complesso NZEB con struttura mista, facciata ventilata e gestione BIM del cronoprogramma.</p>
+            <dl>
+              <div><dt>Durata</dt><dd id="project-duration">14 mesi</dd></div>
+              <div><dt>Superficie</dt><dd id="project-area">8.400 m²</dd></div>
+              <div><dt>Risultato</dt><dd id="project-result">-42% consumi</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="archive">
+          <div class="archive-controls reveal">
+            <label>
+              <span>Cerca progetto</span>
+              <input id="project-search" type="search" placeholder="Nome, città o intervento">
+            </label>
+            <div class="filter-set" aria-label="Filtri progetto">
+              <button class="filter active" type="button" data-filter="all">Tutti</button>
+              <button class="filter" type="button" data-filter="civile">Civile</button>
+              <button class="filter" type="button" data-filter="energia">Energia</button>
+              <button class="filter" type="button" data-filter="industriale">Industriale</button>
+            </div>
+          </div>
+          <div class="project-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="energy section-panel" aria-labelledby="energy-title">
+        <div class="section-copy reveal">
+          <p class="kicker">Comparatore energetico</p>
+          <h2 id="energy-title">Prima e dopo, tradotto in impatto economico.</h2>
+        </div>
+        <div class="energy-tool reveal">
+          <label for="surface">Superficie edificio <strong><span id="surface-value">180</span> m²</strong></label>
+          <input id="surface" type="range" min="80" max="1200" value="180" step="10">
+          <div class="energy-bars" aria-label="Confronto consumi">
+            <div><span>Prima</span><i id="before-bar"></i><strong id="before-value">31.500 kWh</strong></div>
+            <div><span>Dopo</span><i id="after-bar"></i><strong id="after-value">12.600 kWh</strong></div>
+          </div>
+          <p id="saving-value">Risparmio stimato annuo: 4.158 euro</p>
+        </div>
+      </section>
+
+      <section id="servizi" class="services section-panel" aria-labelledby="services-title">
+        <div class="section-copy reveal">
+          <p class="kicker">Servizi</p>
+          <h2 id="services-title">Specializzazioni integrate in un unico metodo operativo.</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service reveal"><span>01</span><h3>Costruzioni civili</h3><p>Residenziale contemporaneo con controllo di tempi, costi e prestazioni.</p></article>
+          <article class="service reveal"><span>02</span><h3>Ristrutturazioni</h3><p>Interventi su edifici abitati, coordinati per ridurre fermo e interferenze.</p></article>
+          <article class="service reveal"><span>03</span><h3>Riqualificazione energetica</h3><p>Involucro, impianti e ponti termici letti come un solo sistema.</p></article>
+          <article class="service reveal"><span>04</span><h3>Efficientamento energetico</h3><p>Diagnosi, interventi mirati e metriche di rientro per ridurre consumi e dispersioni.</p></article>
+          <article class="service reveal"><span>05</span><h3>Cappotti termici</h3><p>Stratigrafie, posa certificata e finiture ad alta durabilità.</p></article>
+          <article class="service reveal"><span>06</span><h3>Facciate e coperture</h3><p>Rifacimenti tecnici con isolamento, impermeabilizzazione e sicurezza.</p></article>
+          <article class="service reveal"><span>07</span><h3>Edilizia industriale</h3><p>Strutture produttive, ampliamenti e manutenzioni programmate.</p></article>
+        </div>
+      </section>
+
+      <section class="timeline section-panel" aria-labelledby="timeline-title">
+        <div class="section-copy reveal">
+          <p class="kicker">Timeline aziendale</p>
+          <h2 id="timeline-title">Crescita tecnica, non solo crescita dimensionale.</h2>
+        </div>
+        <div class="timeline-track">
+          <article class="moment reveal"><time>1998</time><h3>Fondazione operativa</h3><p>Prime commesse residenziali e consolidamento delle squadre interne.</p></article>
+          <article class="moment reveal"><time>2010</time><h3>Energia e involucro</h3><p>Introduzione di processi specifici per cappotti, coperture e riqualificazioni.</p></article>
+          <article class="moment reveal"><time>2018</time><h3>Controllo digitale</h3><p>Computi, cronoprogrammi e verifiche qualità gestiti con flussi condivisi.</p></article>
+          <article class="moment reveal"><time>2026</time><h3>Cantieri data-driven</h3><p>Reportistica visuale, KPI energetici e archivio progetti misurabile.</p></article>
+        </div>
+      </section>
+
+      <section class="magazine section-panel" aria-labelledby="magazine-title">
+        <div class="section-copy reveal">
+          <p class="kicker">Magazine</p>
+          <h2 id="magazine-title">Approfondimenti per decidere meglio prima di aprire un cantiere.</h2>
+        </div>
+        <div class="article-strip">
+          <article class="article reveal"><span>Guida</span><h3>Come leggere un computo senza sorprese</h3></article>
+          <article class="article reveal"><span>Energia</span><h3>Cappotto termico: dove si nascondono gli errori costosi</h3></article>
+          <article class="article reveal"><span>Cantiere</span><h3>Le metriche che anticipano ritardi e varianti</h3></article>
+        </div>
+      </section>
+
+      <section id="contatti" class="contact section-panel" aria-labelledby="contact-title">
+        <div class="section-copy reveal">
+          <p class="kicker">Contatti</p>
+          <h2 id="contact-title">Porta il progetto sul tavolo tecnico.</h2>
+          <p>Risposta entro un giorno lavorativo per prime valutazioni, sopralluoghi e richieste di fattibilità.</p>
+        </div>
+        <form class="contact-form reveal">
+          <label>Nome e cognome<input type="text" name="name" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>Tipo intervento<select name="type"><option>Costruzione civile</option><option>Ristrutturazione</option><option>Riqualificazione energetica</option><option>Efficientamento energetico</option><option>Edilizia industriale</option></select></label>
+          <label>Messaggio<textarea name="message" rows="4" required></textarea></label>
+          <button class="button primary" type="submit">Richiedi una consulenza</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Footer">
+      <div class="footer-signature reveal">
+        <a class="brand footer-brand" href="#home" aria-label="Materia FVG Home">
+          <span>Materia</span>
+          <small>FVG</small>
+        </a>
+        <p>Dal progetto alla realtà, con cantieri misurabili, materiali controllati e precisione esecutiva in Friuli Venezia Giulia.</p>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-column reveal">
+          <h2>Studio tecnico</h2>
+          <a href="mailto:progetti@materiafvg.it">progetti@materiafvg.it</a>
+          <a href="tel:+390432000000">+39 0432 000000</a>
+          <span>Udine / Trieste / Pordenone / Gorizia</span>
+        </div>
+
+        <nav class="footer-column reveal" aria-label="Sezioni sito">
+          <h2>Naviga</h2>
+          <a href="#processo">Processo</a>
+          <a href="#progetti">Progetti</a>
+          <a href="#servizi">Servizi</a>
+          <a href="#contatti">Contatti</a>
+        </nav>
+
+        <div class="footer-column reveal">
+          <h2>Interventi</h2>
+          <span>Costruzioni civili</span>
+          <span>Riqualificazione energetica</span>
+          <span>Efficientamento energetico</span>
+          <span>Facciate e coperture</span>
+          <span>Edilizia industriale</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom reveal">
+        <span>© 2026 Materia FVG</span>
+        <span>Impresa edile premium in Friuli Venezia Giulia</span>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
