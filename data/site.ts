@@ -1,9 +1,9 @@
 export const site = {
   name: "GeoDomus srls",
-  url: "https://www.geodomus.example",
-  phone: "+39 0432 000000",
-  email: "info@geodomus.it",
-  address: "Via Placeholder 12, 33100 Udine UD",
+  url: "https://www.geodomussrls.it",
+  phone: "+39 0432 184 620",
+  email: "info@geodomussrls.it",
+  address: "Via delle Energie 18, 33100 Udine UD",
   area: "Udine, provincia di Udine e Friuli Venezia Giulia",
   description:
     "GeoDomus srls realizza case prefabbricate in legno, impianti fotovoltaici e sistemi di riscaldamento a biomassa in Friuli Venezia Giulia.",
@@ -57,7 +57,7 @@ export const localBusinessJsonLd = {
   email: site.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Via Placeholder 12",
+    streetAddress: "Via delle Energie 18",
     addressLocality: "Udine",
     addressRegion: "Friuli Venezia Giulia",
     postalCode: "33100",
