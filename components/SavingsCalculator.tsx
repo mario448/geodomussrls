@@ -3,16 +3,6 @@
 import { useMemo, useState } from "react";
 import { site } from "@/data/site";
 
-const currency = new Intl.NumberFormat("it-IT", {
-  style: "currency",
-  currency: "EUR",
-  maximumFractionDigits: 0
-});
-
-const number = new Intl.NumberFormat("it-IT", {
-  maximumFractionDigits: 0
-});
-
 const solutionFactors = {
   fotovoltaico: {
     label: "Fotovoltaico",
@@ -38,6 +28,49 @@ type SolutionKey = keyof typeof solutionFactors;
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
+}
+
+function formatNumber(value: number) {
+  return String(Math.round(value)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function formatCurrency(value: number) {
+  return `${formatNumber(value)} euro`;
+}
+
+function UnitInput({
+  label,
+  unit,
+  value,
+  min,
+  max,
+  onChange
+}: {
+  label: string;
+  unit: string;
+  value: number;
+  min: number;
+  max?: number;
+  onChange: (value: number) => void;
+}) {
+  return (
+    <label className="grid gap-2 text-sm font-semibold text-graphite/70">
+      {label}
+      <div className="grid min-h-12 grid-cols-[1fr_auto] overflow-hidden rounded-md border border-graphite/10 bg-white">
+        <input
+          type="number"
+          min={min}
+          max={max}
+          value={value}
+          onChange={(event) => onChange(Number(event.target.value))}
+          className="min-h-12 w-full bg-transparent px-4 text-graphite outline-none"
+        />
+        <span className="flex min-w-14 items-center justify-center border-l border-graphite/10 bg-graphite/[.04] px-3 text-sm font-bold text-graphite/55">
+          {unit}
+        </span>
+      </div>
+    </label>
+  );
 }
 
 export function SavingsCalculator() {
@@ -80,11 +113,11 @@ export function SavingsCalculator() {
     "",
     "vorrei una valutazione personalizzata partendo da questa stima:",
     `- Soluzione: ${solutionFactors[solution].label}`,
-    `- Bolletta elettrica mensile: ${currency.format(monthlyElectricBill)}`,
-    `- Spesa riscaldamento annua: ${currency.format(yearlyHeatingCost)}`,
-    `- Superficie tetto indicativa: ${number.format(roofArea)} mq`,
+    `- Bolletta elettrica mensile: ${formatCurrency(monthlyElectricBill)}`,
+    `- Spesa riscaldamento annua: ${formatCurrency(yearlyHeatingCost)}`,
+    `- Superficie tetto indicativa: ${formatNumber(roofArea)} mq`,
     `- Persone in casa: ${occupants}`,
-    `- Risparmio annuo stimato: ${currency.format(estimate.low)} - ${currency.format(estimate.high)}`,
+    `- Risparmio annuo stimato: ${formatCurrency(estimate.low)} - ${formatCurrency(estimate.high)}`,
     "",
     "Vorrei essere ricontattato per una consulenza."
   ].join("\n");
@@ -100,19 +133,19 @@ export function SavingsCalculator() {
             Quanto puoi risparmiare con una casa piu efficiente?
           </h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-graphite/65">
-            Inserisci pochi dati indicativi su bollette, riscaldamento e copertura. Il calcolatore stima il possibile risparmio con fotovoltaico, accumulo, biomassa e riqualificazione energetica a Udine e in Friuli Venezia Giulia.
+            Inserisci pochi dati indicativi: bolletta elettrica in euro al mese, spesa di riscaldamento in euro all'anno, metri quadrati di tetto disponibile e numero di persone in casa. Il calcolatore stima risparmio, potenza fotovoltaica e produzione in kWh/anno.
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             <div className="rounded-lg border border-graphite/10 bg-warm p-4">
-              <strong className="block text-2xl tracking-tight text-forest">{number.format(estimate.kwp)} kWp</strong>
+              <strong className="block text-2xl tracking-tight text-forest">{formatNumber(estimate.kwp)} kWp</strong>
               <span className="mt-1 block text-sm leading-5 text-graphite/60">impianto fotovoltaico indicativo</span>
             </div>
             <div className="rounded-lg border border-graphite/10 bg-warm p-4">
-              <strong className="block text-2xl tracking-tight text-forest">{number.format(estimate.yearlyProduction)} kWh</strong>
+              <strong className="block text-2xl tracking-tight text-forest">{formatNumber(estimate.yearlyProduction)} kWh</strong>
               <span className="mt-1 block text-sm leading-5 text-graphite/60">produzione annua stimata</span>
             </div>
             <div className="rounded-lg border border-graphite/10 bg-warm p-4">
-              <strong className="block text-2xl tracking-tight text-forest">{currency.format(estimate.tenYears)}</strong>
+              <strong className="block text-2xl tracking-tight text-forest">{formatCurrency(estimate.tenYears)}</strong>
               <span className="mt-1 block text-sm leading-5 text-graphite/60">potenziale su 10 anni</span>
             </div>
           </div>
@@ -125,7 +158,7 @@ export function SavingsCalculator() {
           <div className="grid gap-4">
             <label className="grid gap-2 text-sm font-semibold text-graphite/70">
               Bolletta elettrica mensile
-              <div className="grid grid-cols-[1fr_96px] gap-3">
+              <div className="grid grid-cols-[1fr_156px] gap-3">
                 <input
                   type="range"
                   min="50"
@@ -135,19 +168,23 @@ export function SavingsCalculator() {
                   onChange={(event) => setMonthlyElectricBill(Number(event.target.value))}
                   className="w-full accent-forest"
                 />
-                <input
-                  type="number"
-                  min="0"
-                  value={monthlyElectricBill}
-                  onChange={(event) => setMonthlyElectricBill(Number(event.target.value))}
-                  className="min-h-11 rounded-md border border-graphite/10 bg-white px-3 text-right text-graphite"
-                />
+                <div className="grid min-h-11 grid-cols-[72px_1fr] overflow-hidden rounded-md border border-graphite/10 bg-white">
+                  <input
+                    type="number"
+                    min="0"
+                    value={monthlyElectricBill}
+                    onChange={(event) => setMonthlyElectricBill(Number(event.target.value))}
+                    aria-label="Bolletta elettrica mensile in euro"
+                    className="w-full bg-transparent px-3 text-right font-semibold text-graphite outline-none"
+                  />
+                  <span className="flex items-center justify-center border-l border-graphite/10 bg-graphite/[.04] px-2 text-xs font-bold text-graphite/55">€ / mese</span>
+                </div>
               </div>
             </label>
 
             <label className="grid gap-2 text-sm font-semibold text-graphite/70">
               Spesa annua riscaldamento
-              <div className="grid grid-cols-[1fr_112px] gap-3">
+              <div className="grid grid-cols-[1fr_156px] gap-3">
                 <input
                   type="range"
                   min="500"
@@ -157,39 +194,23 @@ export function SavingsCalculator() {
                   onChange={(event) => setYearlyHeatingCost(Number(event.target.value))}
                   className="w-full accent-forest"
                 />
-                <input
-                  type="number"
-                  min="0"
-                  value={yearlyHeatingCost}
-                  onChange={(event) => setYearlyHeatingCost(Number(event.target.value))}
-                  className="min-h-11 rounded-md border border-graphite/10 bg-white px-3 text-right text-graphite"
-                />
+                <div className="grid min-h-11 grid-cols-[72px_1fr] overflow-hidden rounded-md border border-graphite/10 bg-white">
+                  <input
+                    type="number"
+                    min="0"
+                    value={yearlyHeatingCost}
+                    onChange={(event) => setYearlyHeatingCost(Number(event.target.value))}
+                    aria-label="Spesa annua riscaldamento in euro"
+                    className="w-full bg-transparent px-3 text-right font-semibold text-graphite outline-none"
+                  />
+                  <span className="flex items-center justify-center border-l border-graphite/10 bg-graphite/[.04] px-2 text-xs font-bold text-graphite/55">€ / anno</span>
+                </div>
               </div>
             </label>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <label className="grid gap-2 text-sm font-semibold text-graphite/70">
-                Tetto disponibile
-                <input
-                  type="number"
-                  min="15"
-                  max="140"
-                  value={roofArea}
-                  onChange={(event) => setRoofArea(Number(event.target.value))}
-                  className="min-h-12 rounded-md border border-graphite/10 bg-white px-4 text-graphite"
-                />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold text-graphite/70">
-                Persone in casa
-                <input
-                  type="number"
-                  min="1"
-                  max="10"
-                  value={occupants}
-                  onChange={(event) => setOccupants(Number(event.target.value))}
-                  className="min-h-12 rounded-md border border-graphite/10 bg-white px-4 text-graphite"
-                />
-              </label>
+              <UnitInput label="Tetto disponibile" unit="mq" value={roofArea} min={15} max={140} onChange={setRoofArea} />
+              <UnitInput label="Persone in casa" unit="persone" value={occupants} min={1} max={10} onChange={setOccupants} />
             </div>
 
             <label className="grid gap-2 text-sm font-semibold text-graphite/70">
@@ -211,11 +232,11 @@ export function SavingsCalculator() {
           <div className="mt-6 rounded-lg bg-graphite p-5 text-white sm:p-6">
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-timber">Risparmio annuo stimato</p>
             <p className="mt-3 text-5xl font-semibold tracking-tight sm:text-6xl">
-              {currency.format(estimate.low)} - {currency.format(estimate.high)}
+              {formatCurrency(estimate.low)} - {formatCurrency(estimate.high)}
             </p>
             <div className="mt-5 grid gap-3 text-sm text-white/72 sm:grid-cols-2">
-              <p>Energia elettrica: {currency.format(estimate.electricSaving)}/anno</p>
-              <p>Riscaldamento: {currency.format(estimate.heatingSaving)}/anno</p>
+              <p>Energia elettrica: {formatCurrency(estimate.electricSaving)}/anno</p>
+              <p>Riscaldamento: {formatCurrency(estimate.heatingSaving)}/anno</p>
             </div>
             <a
               href={mailHref}
