@@ -69,13 +69,13 @@ export default function HomePage() {
     <main>
       <section className="relative min-h-screen overflow-hidden bg-graphite px-5 pt-28 text-white lg:px-8">
         <Image
-          src="/images/villa-geodomus-hero.jpg"
+          src="/images/villa-geodomus-hero-v3.jpg"
           alt="Villa moderna in legno con pannelli fotovoltaici in Friuli Venezia Giulia"
           fill
           priority
           quality={82}
           sizes="100vw"
-          className="object-cover object-[66%_center]"
+          className="object-cover object-[58%_center]"
         />
         <div className="absolute inset-0 bg-graphite/24" aria-hidden="true" />
         <div className="relative z-10 mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-end pb-10">
