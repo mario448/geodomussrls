@@ -7,9 +7,9 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Blog SEO su case in legno, fotovoltaico e biomassa",
   description:
-    "Approfondimenti GeoDomus su case prefabbricate in legno, fotovoltaico, biomassa ed efficienza energetica in Friuli Venezia Giulia.",
+    "Approfondimenti GeoDomus su case prefabbricate in legno, fotovoltaico, biomassa, incentivi 2026 ed efficienza energetica in Friuli Venezia Giulia.",
   path: "/blog",
-  keywords: ["case prefabbricate FVG", "fotovoltaico Udine", "riscaldamento a biomassa Udine", "efficienza energetica FVG"]
+  keywords: ["case prefabbricate FVG", "fotovoltaico Udine", "riscaldamento a biomassa Udine", "efficienza energetica FVG", "incentivi Friuli Venezia Giulia 2026", "contributi FVG fotovoltaico 2026"]
 });
 
 export default function BlogPage() {

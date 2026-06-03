@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
 import { FadeIn } from "@/components/Motion";
+import { SavingsCalculator } from "@/components/SavingsCalculator";
 import { services } from "@/data/site";
 import { pageMetadata } from "@/lib/seo";
 
@@ -20,7 +21,9 @@ export const metadata = pageMetadata({
     "riscaldamento a biomassa Udine",
     "caldaie a pellet Friuli Venezia Giulia",
     "abitazioni sostenibili Udine",
-    "efficienza energetica FVG"
+    "efficienza energetica FVG",
+    "calcolatore risparmio energetico",
+    "risparmio bolletta fotovoltaico Udine"
   ]
 });
 
@@ -94,8 +97,8 @@ export default function HomePage() {
               <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-bold text-graphite shadow-lg shadow-black/25">
                 Richiedi una consulenza
               </Link>
-              <Link href="#soluzioni" className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/45 bg-white/16 px-6 font-bold text-white backdrop-blur">
-                Scopri le soluzioni
+              <Link href="#calcolatore-risparmio" className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/45 bg-white/16 px-6 font-bold text-white backdrop-blur">
+                Calcola il risparmio
               </Link>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -159,6 +162,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <SavingsCalculator />
 
       <section className="bg-graphite px-5 py-20 text-white lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
