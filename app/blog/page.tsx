@@ -14,6 +14,19 @@ export const metadata = pageMetadata({
 
 const categories = ["Case in legno", "Fotovoltaico", "Biomassa", "Soluzioni integrate", "Incentivi e normative", "Errori da evitare"];
 
+const editorialPlan = [
+  ["Casa in legno in Friuli: errori da evitare prima del progetto", "Terreno, orientamento, tetto, impianti e capitolato prima del modello estetico."],
+  ["Fotovoltaico con accumulo: quando conviene davvero", "Consumi, autoconsumo, fasce orarie, batterie e casi in cui l'accumulo puo aspettare."],
+  ["Biomassa, pellet o pompa di calore: criteri pratici di scelta", "Spazio tecnico, gestione combustibile, fabbisogno termico, manutenzione e vincoli."],
+  ["Quanto costa sbagliare l'ordine degli interventi in una riqualificazione", "Esempi di varianti, doppie lavorazioni, impianti sovradimensionati e priorita invertite."],
+  ["General contractor energetico: cosa deve essere scritto nel contratto", "Responsabilita, capitolato, cronoprogramma, garanzie applicabili e gestione varianti."],
+  ["Casa in legno e fotovoltaico: predisposizioni da fare prima del cantiere", "Passaggi cavi, quadro elettrico, orientamento tetto, accumulo e monitoraggio."],
+  ["Preventivi fotovoltaico: perche confrontare solo i kWp e un errore", "Componenti, ombre, esposizione, profilo consumi, garanzie e costo reale dell'impianto."],
+  ["Biomassa per aziende agricole: quando ha senso e quando no", "Disponibilita combustibile, spazi, fabbisogni, accessi, manutenzione e continuita d'uso."],
+  ["Come capire se una casa esistente puo diventare davvero efficiente", "Bollette, involucro, impianti, tetto, serramenti, umidita e interventi prioritari."],
+  ["Fotovoltaico, biomassa e casa in legno: come evitare soluzioni scollegate", "Metodo per far dialogare edificio, energia elettrica, calore e budget."]
+];
+
 export default function BlogPage() {
   return (
     <main>
@@ -45,6 +58,28 @@ export default function BlogPage() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="bg-stone/55 px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Piano editoriale</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Prossime guide tecniche da pubblicare</h2>
+            <p className="mt-6 text-lg leading-8 text-graphite/65">
+              Non pubblichiamo articoli vuoti: questi sono i temi prioritari da trasformare in guide complete per chi deve decidere prima di firmare preventivi.
+            </p>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-2">
+            {editorialPlan.map(([title, outline]) => (
+              <FadeIn key={title} className="rounded-lg border border-graphite/10 bg-white p-6 shadow-soft">
+                <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
+                <p className="mt-3 leading-7 text-graphite/65">{outline}</p>
+              </FadeIn>
+            ))}
+          </div>
+          <p className="mt-8 max-w-3xl leading-8 text-graphite/65">
+            CTA standard per ogni articolo: hai un progetto simile? Inviaci comune, consumi, foto e obiettivi. Ti diremo quali dati servono per una prima valutazione tecnica.
+          </p>
         </div>
       </section>
     </main>

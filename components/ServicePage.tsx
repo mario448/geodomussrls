@@ -47,7 +47,7 @@ export function ServicePage(props: ServicePageProps) {
             <p className="text-xl leading-9 text-graphite/65">{props.intro}</p>
             <div className="mt-8">
               <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-semibold text-white">
-                Richiedi una verifica tecnica preliminare
+                {props.cta}
               </Link>
               <p className="mt-2 text-sm text-graphite/55">Partiamo da dati concreti prima di formulare ipotesi o preventivi.</p>
             </div>

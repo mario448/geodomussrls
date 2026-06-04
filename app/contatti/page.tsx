@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Avvia un progetto GeoDomus chiavi in mano",
+  title: "Raccontaci il progetto",
   description:
     "Invia a GeoDomus srls i dati minimi su edificio, consumi e obiettivi per valutare case in legno, fotovoltaico, biomassa e soluzioni integrate in FVG.",
   path: "/contatti",
@@ -36,9 +36,9 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Contatti</p>
-            <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Avvia un progetto GeoDomus chiavi in mano</h1>
+            <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Raccontaci il progetto</h1>
             <p className="mt-6 text-xl leading-9 text-graphite/65">
-              Non partire da fornitori separati. Inviaci i dati minimi e capiamo come impostare progettazione, realizzazione e installazione in un unico percorso.
+              Non facciamo preventivi seri senza dati. Piu informazioni inserisci, piu la prima risposta sara utile. Se hai gia bollette, foto, planimetrie o preventivi, segnalalo nel messaggio.
             </p>
             <div className="mt-8 grid gap-3 text-graphite/65">
               <p>
@@ -57,15 +57,16 @@ export default function ContactPage() {
               <label className="grid gap-2 text-sm text-graphite/60">Email<input required type="email" name="email" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
               <label className="grid gap-2 text-sm text-graphite/60">Telefono<input name="phone" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
               <label className="grid gap-2 text-sm text-graphite/60">Comune<input name="city" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Tipo di edificio<select name="buildingType" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Nuova costruzione</option><option>Casa esistente</option><option>Azienda agricola</option><option>Struttura ricettiva</option><option>Altro</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Obiettivo principale<select name="goal" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Costruire casa</option><option>Ridurre bollette</option><option>Installare fotovoltaico</option><option>Valutare biomassa</option><option>Integrare piu soluzioni</option><option>Capire da dove partire</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Spesa elettrica mensile indicativa<input name="monthlyElectricCost" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Spesa riscaldamento annua indicativa<input name="yearlyHeatingCost" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Hai bollette, foto o planimetrie disponibili?<select name="documentsAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Si</option><option>No</option></select></label>
+              <label className="grid gap-2 text-sm text-graphite/60">Tipo di progetto<select name="projectType" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Nuova casa in legno</option><option>Riqualificazione edificio</option><option>Fotovoltaico</option><option>Biomassa</option><option>Soluzione integrata</option><option>Azienda agricola</option><option>Struttura ricettiva</option></select></label>
+              <label className="grid gap-2 text-sm text-graphite/60">Stato attuale<select name="projectStatus" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Idea iniziale</option><option>Terreno disponibile</option><option>Progetto architettonico gia avviato</option><option>Edificio esistente</option><option>Preventivi gia ricevuti</option><option>Lavori gia iniziati</option></select></label>
+              <label className="grid gap-2 text-sm text-graphite/60">Budget indicativo<select name="budget" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Sotto 20.000 euro</option><option>20.000-50.000 euro</option><option>50.000-150.000 euro</option><option>Oltre 150.000 euro</option><option>Da definire</option></select></label>
+              <label className="grid gap-2 text-sm text-graphite/60">Tempi previsti<select name="timing" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Subito</option><option>Entro 3 mesi</option><option>Entro 6 mesi</option><option>Entro 12 mesi</option><option>Sto valutando</option></select></label>
+              <label className="grid gap-2 text-sm text-graphite/60">Hai documenti disponibili?<select name="documentsAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Bollette</option><option>Foto tetto</option><option>Planimetrie</option><option>Progetto tecnico</option><option>Preventivi ricevuti</option><option>Nessun documento</option></select></label>
               <label className="grid gap-2 text-sm text-graphite/60">Messaggio<textarea required name="message" rows={5} className="rounded-md border border-graphite/10 p-4 text-graphite" /></label>
+              <label className="flex gap-3 text-sm leading-6 text-graphite/60"><input required type="checkbox" name="privacy" className="mt-1" /> Accetto il trattamento dei dati per essere ricontattato da GeoDomus.</label>
               <p className="text-sm leading-6 text-graphite/55">Piu dati fornisci, piu utile sara la prima risposta. Non proponiamo pacchetti standard senza capire edificio, consumi e obiettivi.</p>
-              <button type="submit" className="min-h-12 rounded-md bg-graphite px-6 font-semibold text-white">Avvia il progetto con GeoDomus</button>
-              <p className="text-sm leading-6 text-graphite/55">Dopo l'invio ti ricontatteremo entro 1 giorno lavorativo per fissare un primo colloquio telefonico gratuito di 20 minuti.</p>
+              <button type="submit" className="min-h-12 rounded-md bg-graphite px-6 font-semibold text-white">Invia richiesta di valutazione</button>
+              <p className="text-sm leading-6 text-graphite/55">Richiesta ricevuta. Analizzeremo i dati inviati e ti ricontatteremo per indicarti il prossimo passo utile: raccolta documenti, sopralluogo, confronto tecnico o preventivo preliminare.</p>
             </form>
           </FadeIn>
         </div>

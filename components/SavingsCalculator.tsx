@@ -119,7 +119,7 @@ export function SavingsCalculator() {
     `- Persone in casa: ${occupants}`,
     `- Risparmio annuo stimato: ${formatCurrency(estimate.low)} - ${formatCurrency(estimate.high)}`,
     "",
-    "Vorrei essere ricontattato per una consulenza."
+    "Vorrei inviare questi dati per una verifica preliminare."
   ].join("\n");
 
   const mailHref = `mailto:${site.email}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
@@ -130,10 +130,10 @@ export function SavingsCalculator() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Calcolatore risparmio energetico</p>
           <h2 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight text-graphite lg:text-7xl">
-            Quanto puoi risparmiare con una casa piu efficiente?
+            Stima preliminare: vale la pena approfondire?
           </h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-graphite/65">
-            Inserisci pochi dati indicativi: bolletta elettrica in euro al mese, spesa di riscaldamento in euro all'anno, metri quadrati di tetto disponibile e numero di persone in casa. Il calcolatore stima risparmio, potenza fotovoltaica e produzione in kWh/anno.
+            Usa questo strumento per avere un ordine di grandezza, non un preventivo. Il risultato serve a capire se vale la pena approfondire, non a promettere un risparmio certo.
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             <div className="rounded-lg border border-graphite/10 bg-warm p-4">
@@ -150,7 +150,7 @@ export function SavingsCalculator() {
             </div>
           </div>
           <p className="mt-5 max-w-3xl text-sm leading-6 text-graphite/48">
-            Stima orientativa basata su valori medi. Una consulenza tecnica verifica esposizione, consumi reali, vincoli, incentivi disponibili e integrazione tra edificio e impianti.
+            Questa stima non sostituisce una valutazione tecnica. Per validarla servono bollette, esposizione tetto, ombre, superficie utile, profilo consumi, impianto termico esistente e vincoli locali.
           </p>
         </div>
 
@@ -242,7 +242,7 @@ export function SavingsCalculator() {
               href={mailHref}
               className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-white px-5 text-center font-bold text-graphite sm:w-auto"
             >
-              Ricevi una valutazione personalizzata
+              Invia questi dati per una verifica preliminare
             </a>
           </div>
         </div>

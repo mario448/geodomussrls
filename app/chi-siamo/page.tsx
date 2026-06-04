@@ -35,7 +35,7 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-      <CTA title="Hai un terreno, una casa o un progetto da valutare?" text="GeoDomus porta competenza tecnica e conoscenza locale dentro ogni scelta." />
+      <CTA title="Hai un terreno, una casa o un progetto da valutare?" text="GeoDomus coordina analisi, priorita tecniche e scelte operative in base a edificio, consumi e vincoli locali." />
     </main>
   );
 }

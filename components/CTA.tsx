@@ -11,7 +11,7 @@ export function CTA({ title, text }: { title: string; text: string }) {
         </div>
         <div>
           <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-semibold text-graphite">
-            Avvia il progetto
+            Invia i dati del progetto
           </Link>
           <p className="mt-2 text-sm text-white/55">Piu dati fornisci, piu utile sara la prima risposta.</p>
         </div>

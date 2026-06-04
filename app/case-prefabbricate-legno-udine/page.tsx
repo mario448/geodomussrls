@@ -29,7 +29,7 @@ export default function WoodHomesPage() {
       mistakes={["Scegliere solo in base al prezzo al mq", "Non valutare comfort estivo e acustica", "Separare progetto architettonico e impianti", "Non chiarire cosa e incluso nel capitolato", "Confrontare preventivi non equivalenti"]}
       process={["Analisi del terreno, esigenze e budget", "Sopralluogo e verifica vincoli", "Progettazione tecnica e prestazionale", "Definizione materiali e impianti integrati", "Realizzazione e assistenza post-intervento"]}
       faqs={faqs.wood}
-      cta="Valuta il tuo progetto di casa in legno"
+      cta="Verifica se il tuo progetto e pronto per una casa in legno"
     />
   );
 }

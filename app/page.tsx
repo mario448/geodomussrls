@@ -26,9 +26,9 @@ export const metadata = pageMetadata({
 });
 
 const proofPoints = [
-  { value: "Un solo referente", label: "Un percorso unico per casa, fotovoltaico e biomassa, senza responsabilita disperse tra fornitori diversi." },
-  { value: "Progetto + cantiere", label: "Le scelte tecniche vengono pensate in funzione della realizzazione, non solo del disegno iniziale." },
-  { value: "Chiavi in mano", label: "Dall'idea alla consegna: analisi, progetto, coordinamento operativo, installazione e collaudo." }
+  { value: "Progettazione", label: "Definiamo casa, fotovoltaico, biomassa, priorita tecniche e capitolato prima di iniziare." },
+  { value: "Realizzazione", label: "Coordiniamo cantiere, installazioni, forniture, verifiche e consegna degli interventi." },
+  { value: "Un solo referente", label: "Il cliente non deve inseguire progettista, impresa e installatori separati." }
 ];
 
 const risks = [
@@ -37,6 +37,66 @@ const risks = [
   "Fotovoltaico aggiunto dopo, con passaggi, quadri e accumulo gestiti come varianti",
   "Biomassa scelta quando spazi, canna fumaria e fabbisogno non sono stati previsti in progetto"
 ];
+
+const offerTable = [
+  ["Analisi preliminare", "Edificio, consumi, obiettivi, budget indicativo", "Bollette, foto, planimetrie, vincoli locali", "Quadro iniziale di fattibilita e dati mancanti"],
+  ["Progettazione", "Sequenza tecnica tra casa, impianti e priorita", "Progettisti, fornitori, installatori e pratiche", "Schema di intervento e capitolato leggibile"],
+  ["Casa in legno", "Involucro, layout, comfort, predisposizioni impiantistiche", "Struttura, tetto, serramenti, impianti e tempi di cantiere", "Progetto coerente con energia e riscaldamento"],
+  ["Fotovoltaico", "Dimensionamento, copertura, autoconsumo e accumulo", "Passaggi, quadri, inverter, vincoli e monitoraggio", "Impianto dimensionato sui consumi reali"],
+  ["Biomassa", "Fabbisogno termico, locale tecnico, deposito e gestione", "Canna fumaria, accessi, manutenzione e integrazione", "Soluzione termica compatibile con edificio e uso"],
+  ["Pratiche e documentazione", "Documenti tecnici disponibili e necessari", "Permessi, incentivi, schede impianto e dati catastali", "Elenco documenti e responsabilita definite"],
+  ["Cantiere", "Sequenza operativa e priorita degli interventi", "Forniture, installazioni, controlli e varianti", "Cronoprogramma tecnico condiviso"],
+  ["Collaudo e assistenza", "Funzionamento impianti e documentazione finale", "Verifiche, consegna documenti, manutenzione futura", "Sistema consegnato con riferimenti chiari"]
+];
+
+const technicalCards = [
+  {
+    title: "Tetto verificato",
+    text: "Analizziamo orientamento, superficie utile, ombre, inclinazione e possibilita di installazione prima di parlare di potenza dell'impianto.",
+    image: "/images/home-fotovoltaico-tetto-geodomus.jpg"
+  },
+  {
+    title: "Locale tecnico valutato",
+    text: "Verifichiamo spazi, accessi, ventilazione, deposito combustibile, canna fumaria e compatibilita con gli impianti esistenti.",
+    image: "/images/home-biomassa-locale-geodomus.jpg"
+  },
+  {
+    title: "Consumi analizzati",
+    text: "Partiamo da bollette, abitudini d'uso, fabbisogno termico e profilo elettrico. Senza dati, il preventivo e solo una supposizione.",
+    image: "/images/villa-geodomus-hero.jpg"
+  },
+  {
+    title: "Soluzione dimensionata",
+    text: "Proponiamo componenti e priorita in base al sistema complessivo: edificio, energia, riscaldamento, budget e tempi.",
+    image: "/images/villa-geodomus-hero-v2.jpg"
+  }
+];
+
+const avoidTable = [
+  ["Fotovoltaico deciso dopo il progetto del tetto", "Varianti, canaline visibili, costi extra", "Predisposizione tecnica prima del cantiere"],
+  ["Biomassa scelta tardi", "Locale tecnico inadatto o costi aggiuntivi", "Verifica spazi, canna fumaria e deposito prima del preventivo"],
+  ["Preventivi separati", "Nessuno risponde del sistema completo", "Capitolato integrato e responsabilita definite"],
+  ["Impianto sovradimensionato", "Spesa inutile e ritorno economico piu debole", "Dimensionamento su consumi e fabbisogni reali"],
+  ["Cliente senza dati tecnici", "Decisioni a sensazione", "Raccolta bollette, foto, planimetrie e obiettivi"]
+];
+
+const fitCriteria = {
+  yes: [
+    "vuoi costruire o riqualificare con una visione completa",
+    "vuoi evitare fornitori scollegati",
+    "vuoi capire l'ordine corretto degli interventi",
+    "vuoi valutare impianti in funzione dell'edificio",
+    "hai bisogno di un referente che coordini le decisioni tecniche",
+    "sei disposto a condividere dati, bollette, foto, planimetrie e budget indicativo"
+  ],
+  no: [
+    "cerchi solo il prezzo piu basso",
+    "vuoi un preventivo immediato senza dati",
+    "hai gia deciso tutto e vuoi solo posa",
+    "non vuoi fare un'analisi preliminare",
+    "vuoi confrontare offerte solo sul prezzo al kWp o sul costo al metro quadro"
+  ]
+};
 
 const offerCards = [
   {
@@ -73,7 +133,7 @@ const paths = [
   {
     title: "Famiglie che vogliono costruire",
     text: "Realizziamo il percorso completo: casa in legno, impianti integrati, fotovoltaico, biomassa e consegna coordinata.",
-    cta: "Avvia il progetto casa"
+    cta: "Verifica il progetto casa"
   },
   {
     title: "Proprietari che riqualificano",
@@ -249,25 +309,25 @@ export default function HomePage() {
           <FadeIn className="max-w-4xl rounded-lg border border-white/20 bg-graphite/76 p-5 shadow-[0_32px_90px_rgba(0,0,0,.38)] backdrop-blur-sm sm:p-7 lg:p-9">
             <p className="text-xs font-extrabold uppercase tracking-[.18em] text-[#f2bd83]">GeoDomus srls / Udine e Friuli Venezia Giulia</p>
             <h1 className="mt-5 max-w-5xl text-6xl font-semibold tracking-tight text-white md:text-8xl lg:text-9xl">
-              Progettiamo, realizziamo e installiamo la tua casa green chiavi in mano.
+              Progettiamo e realizziamo case efficienti, impianti e riqualificazioni.
             </h1>
             <p className="mt-6 max-w-3xl text-lg font-semibold leading-8 text-white">
-              Case in legno, fotovoltaico e biomassa in un unico percorso operativo: una sola regia, un solo referente, una sequenza tecnica coordinata dall'idea al cantiere.
+              GeoDomus segue progettazione e realizzazione di case in legno, fotovoltaico, biomassa e riqualificazione energetica in un unico percorso tecnico in Friuli Venezia Giulia.
             </p>
             <p className="mt-4 max-w-3xl leading-8 text-white/86">
-              Non devi cercare progettisti, imprese e installatori separati. GeoDomus coordina progettazione, realizzazione, installazione, collaudo e assistenza.
+              Prima progettiamo il sistema casa-energia. Poi coordiniamo cantiere, installazioni, collaudo e assistenza.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <div>
                 <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-bold text-graphite shadow-lg shadow-black/25">
-                  Voglio iniziare il progetto chiavi in mano
+                  Richiedi una prima valutazione tecnica gratuita
                 </Link>
                 <p className="mt-2 max-w-xl text-sm font-medium text-white/70">
-                  Primo confronto gratuito di 20 minuti per capire terreno, edificio, budget, obiettivi e prossimi passi.
+                  In 20 minuti capiamo se il progetto ha senso, quali dati servono e quali errori evitare prima di chiedere preventivi.
                 </p>
               </div>
               <Link href="#metodo-geodomus" className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/45 bg-white/16 px-6 font-bold text-white backdrop-blur">
-                Mostrami come funziona
+                Scopri il metodo GeoDomus
               </Link>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -282,53 +342,68 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.78fr_1.22fr]">
-          <FadeIn>
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Impresa integrata</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Come funziona GeoDomus: una sola azienda, non dieci interlocutori.</h2>
+      <section className="bg-stone/55 px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Cosa fa GeoDomus</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Progettazione e realizzazione nello stesso percorso tecnico.</h2>
             <p className="mt-6 text-lg leading-8 text-graphite/65">
-              GeoDomus non si limita a consegnare una consulenza e lasciare al cliente il compito di cercare progettisti, imprese e installatori. Il valore e avere un unico percorso: progettazione, realizzazione, installazione e collaudo vengono coordinati dentro la stessa regia operativa.
+              GeoDomus non consegna solo una consulenza e non vende solo singoli impianti. Progetta il sistema casa-energia e ne segue la realizzazione: struttura, fotovoltaico, biomassa, riqualificazione, cantiere, installazioni e collaudo.
             </p>
           </FadeIn>
-          <div className="grid gap-4 lg:grid-cols-3">
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                title: "Progettiamo quello che realizziamo",
-                text: "Le scelte su struttura, impianti, passaggi tecnici, tetto e locale termico vengono pensate insieme, prima del cantiere."
+                title: "Progettiamo il sistema",
+                text: "Casa, tetto, impianti, consumi, biomassa e budget vengono letti insieme prima del capitolato."
               },
               {
-                title: "Coordiniamo il cantiere",
-                text: "Il cliente non deve rincorrere fornitori separati: GeoDomus mantiene la regia tecnica tra casa, fotovoltaico e biomassa."
+                title: "Realizziamo gli interventi",
+                text: "Il progetto non resta su carta: GeoDomus coordina cantiere, forniture, installazioni e verifiche operative."
               },
               {
-                title: "Un riferimento unico",
-                text: "Domande, varianti, verifiche e assistenza passano da un unico referente, riducendo scarichi di responsabilita e tempi morti."
+                title: "Coordiniamo le parti tecniche",
+                text: "Progettisti, impresa, installatori e pratiche vengono gestiti dentro una sequenza coerente."
+              },
+              {
+                title: "Consegniamo un percorso chiaro",
+                text: "Sai quali dati servono, cosa viene realizzato, quali passaggi sono critici e chi segue ogni fase."
               }
             ].map((item) => (
-              <FadeIn key={item.title} className="rounded-lg border border-graphite/10 bg-warm p-6">
+              <FadeIn key={item.title} className="rounded-lg border border-graphite/10 bg-white p-6 shadow-soft">
                 <h3 className="text-2xl font-semibold tracking-tight">{item.title}</h3>
                 <p className="mt-4 leading-7 text-graphite/65">{item.text}</p>
               </FadeIn>
             ))}
           </div>
+          <div className="mt-10 rounded-lg bg-graphite p-6 text-white shadow-soft lg:grid lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:gap-10">
+            <p className="text-2xl font-semibold tracking-tight">Prima progettiamo il sistema. Poi lo realizziamo.</p>
+            <p className="mt-4 leading-8 text-white/68 lg:mt-0">
+              Un impianto efficiente dentro un progetto sbagliato resta un costo. Per questo colleghiamo analisi, progetto, cantiere e installazioni nello stesso percorso.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="px-5 py-16 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {[
-            { src: "/images/case-legno-geodomus.jpg", alt: "Casa in legno GeoDomus", label: "Struttura in legno" },
-            { src: "/images/fotovoltaico-geodomus.jpg", alt: "Fotovoltaico integrato su tetto", label: "Tetto e fotovoltaico" },
-            { src: "/images/biomassa-geodomus.jpg", alt: "Impianto a biomassa", label: "Locale tecnico" },
-            { src: "/images/villa-geodomus-hero-v2.jpg", alt: "Abitazione efficiente chiavi in mano", label: "Consegna coordinata" }
-          ].map((image) => (
-            <FadeIn key={image.src} className="relative min-h-[250px] overflow-hidden rounded-lg bg-graphite shadow-soft">
-              <Image src={image.src} alt={image.alt} fill quality={78} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-graphite/70 via-transparent to-transparent" aria-hidden="true" />
-              <p className="absolute bottom-4 left-4 right-4 text-xl font-semibold tracking-tight text-white">{image.label}</p>
-            </FadeIn>
-          ))}
+      <section className="px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Verifiche tecniche</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Dal sopralluogo alla soluzione tecnica</h2>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {technicalCards.map((card) => (
+              <FadeIn key={card.title} className="overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
+                <div className="relative aspect-[4/3]">
+                  <Image src={card.image} alt={card.title} fill quality={76} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold tracking-tight">{card.title}</h3>
+                  <p className="mt-4 leading-7 text-graphite/65">{card.text}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -351,37 +426,6 @@ export default function HomePage() {
               </FadeIn>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section id="soluzioni" className="px-5 py-20 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <FadeIn className="max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Cosa realizziamo</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Le tre cose che realizziamo e come le integriamo.</h2>
-            <p className="mt-5 text-lg leading-8 text-graphite/65">
-              Non sono tre servizi separati. Sono parti di un'unica soluzione in cui ogni scelta condiziona le altre: struttura, impianti, produzione elettrica, calore e gestione futura.
-            </p>
-          </FadeIn>
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {offerCards.map((card) => (
-              <FadeIn key={card.title} className="overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
-                <div className="relative aspect-[4/3]">
-                  <Image src={card.image} alt={card.alt} fill quality={76} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
-                </div>
-                <div className="p-7">
-                  <h3 className="text-2xl font-semibold tracking-tight">{card.title}</h3>
-                  <p className="mt-4 leading-7 text-graphite/65">{card.text}</p>
-                  <Link href={card.href} className="mt-6 inline-flex font-semibold text-forest">
-                    Approfondisci
-                  </Link>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-          <Link href="/contatti" className="mt-10 inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-bold text-white">
-            Voglio vedere come integrare questi elementi nel mio progetto
-          </Link>
         </div>
       </section>
 
@@ -409,7 +453,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-timber">Dal contatto alla consegna</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Il processo GeoDomus per arrivare al chiavi in mano.</h2>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Il processo GeoDomus dal primo confronto al collaudo.</h2>
             <p className="mt-6 max-w-xl leading-8 text-white/65">
               Non e una consulenza che finisce con un PDF. E un percorso operativo: primo contatto, verifica tecnica, progetto integrato, cantiere, installazioni, collaudo e assistenza.
             </p>
@@ -441,150 +485,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-5 py-20 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <FadeIn className="max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Confronto</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Interventi separati vs approccio GeoDomus</h2>
-          </FadeIn>
-          <div className="mt-12 overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
-            <div className="grid bg-graphite text-white md:grid-cols-2">
-              <p className="p-5 text-xl font-semibold">Approccio tradizionale</p>
-              <p className="border-t border-white/10 p-5 text-xl font-semibold md:border-l md:border-t-0">Approccio GeoDomus</p>
-            </div>
-            {comparison.map(([traditional, geodomus]) => (
-              <div key={traditional} className="grid border-t border-graphite/10 md:grid-cols-2">
-                <p className="p-5 leading-7 text-graphite/65">{traditional}</p>
-                <p className="border-t border-graphite/10 p-5 leading-7 font-semibold text-graphite md:border-l md:border-t-0">{geodomus}</p>
-              </div>
-            ))}
-          </div>
-          <Link href="/contatti" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-bold text-white">
-            Fai valutare il progetto prima di comprare singoli impianti
-          </Link>
-        </div>
-      </section>
-
-      <section className="bg-white px-5 py-20 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
-          <FadeIn>
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Contratto e garanzie</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Una regia contrattuale, non dieci responsabilita separate.</h2>
-            <p className="mt-6 leading-8 text-graphite/65">
-              Il valore di un percorso integrato non e solo tecnico. E anche contrattuale: cosa e incluso, chi risponde di cosa, quali fasi sono previste, quali garanzie si applicano e quali manutenzioni servono dopo la consegna devono essere chiari prima di iniziare.
-            </p>
-          </FadeIn>
-          <div className="grid gap-4 md:grid-cols-2">
-            {[
-              "Responsabilita operative definite prima del cantiere",
-              "Capitolato leggibile: struttura, impianti, fotovoltaico, biomassa e finiture",
-              "Cronoprogramma condiviso con fasi, vincoli e dipendenze tecniche",
-              "Garanzie da indicare in contratto: [DA COMPLETARE: dettagli garanzie applicabili]",
-              "Assistenza post-intervento: [DA COMPLETARE: modalita e durata]",
-              "Un referente unico per comunicazioni, varianti e verifiche"
-            ].map((item) => (
-              <FadeIn key={item} className="rounded-lg border border-graphite/10 bg-warm p-6">
-                <p className="text-xl font-semibold">{item}</p>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-stone/55 px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <FadeIn className="max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Percorso completo</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Dalla consulenza alla realizzazione.</h2>
-            <p className="mt-5 text-lg leading-8 text-graphite/65">
-              GeoDomus nasce per seguire l'intero percorso tecnico: prima l'analisi, poi il progetto, infine la realizzazione coordinata degli interventi.
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Errori evitabili</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Cosa evitiamo concretamente</h2>
           </FadeIn>
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {completePath.map((item) => (
-              <FadeIn key={item.title} className="rounded-lg border border-graphite/10 bg-white p-6 shadow-soft">
-                <h3 className="text-xl font-semibold tracking-tight">{item.title}</h3>
-                <p className="mt-3 leading-7 text-graphite/62">{item.text}</p>
-              </FadeIn>
-            ))}
-          </div>
           <div className="mt-12 grid gap-4 lg:grid-cols-3">
-            {visualStory.map((image) => (
-              <FadeIn key={image.src} className="relative min-h-[260px] overflow-hidden rounded-lg bg-graphite">
-                <Image src={image.src} alt={image.alt} fill quality={76} sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-graphite/70 via-graphite/10 to-transparent" aria-hidden="true" />
-                <p className="absolute bottom-5 left-5 right-5 text-2xl font-semibold tracking-tight text-white">{image.label}</p>
+            {avoidTable.slice(0, 3).map(([risk, consequence, prevention]) => (
+              <FadeIn key={risk} className="rounded-lg border border-graphite/10 bg-white p-6 shadow-soft">
+                <p className="text-xs font-bold uppercase tracking-[.14em] text-forest">Rischio</p>
+                <h3 className="mt-3 text-2xl font-semibold tracking-tight">{risk}</h3>
+                <p className="mt-4 leading-7 text-graphite/62">{consequence}</p>
+                <p className="mt-5 rounded-md bg-warm p-4 font-semibold leading-7 text-forest">{prevention}</p>
               </FadeIn>
             ))}
           </div>
+          <p className="mt-8 max-w-4xl text-lg leading-8 text-graphite/65">
+            Il nostro lavoro non e vendere il componente piu costoso. E evitare scelte scollegate che generano varianti, ritardi e costi non previsti.
+          </p>
         </div>
       </section>
 
       <SavingsCalculator />
-
-      <section className="bg-white px-5 py-20 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <FadeIn className="max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Visual tecnici</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Casa, energia e impianti nello stesso percorso.</h2>
-            <p className="mt-5 text-lg leading-8 text-graphite/65">
-              Le immagini sono riferimenti visivi coerenti con le aree di intervento GeoDomus: involucro, fotovoltaico, biomassa e gestione integrata.
-            </p>
-          </FadeIn>
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {gallery.map((image) => (
-              <FadeIn key={image.src} className="relative min-h-[300px] overflow-hidden rounded-lg bg-graphite shadow-soft">
-                <Image src={image.src} alt={image.alt} fill quality={78} sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-graphite/72 via-graphite/8 to-transparent" aria-hidden="true" />
-                <p className="absolute bottom-5 left-5 right-5 text-2xl font-semibold tracking-tight text-white">{image.label}</p>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-20 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.85fr_1.15fr]">
-          <FadeIn>
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Simulazione tecnica</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Simulazione tecnica su abitazione tipo</h2>
-            <p className="mt-6 leading-8 text-graphite/65">
-              Questo esempio non sostituisce una progettazione esecutiva. Serve a mostrare come GeoDomus ragiona su consumi, impianti e priorita di intervento.
-            </p>
-          </FadeIn>
-          <FadeIn className="overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
-            <div className="relative aspect-[16/7]">
-              <Image src="/images/villa-geodomus-hero-v2.jpg" alt="Esempio di villa moderna per progetto integrato casa ed energia" fill quality={76} sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
-            </div>
-            <div className="p-6 lg:p-8">
-              <div className="grid gap-4 md:grid-cols-3">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[.16em] text-forest">Contesto edificio</p>
-                  <p className="mt-3 leading-7 text-graphite/65">Abitazione tipo in provincia di Udine, con tetto utile e impianto termico tradizionale da verificare sul posto.</p>
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[.16em] text-forest">Dati considerati</p>
-                  <p className="mt-3 leading-7 text-graphite/65">Bolletta elettrica, spesa riscaldamento, superficie tetto, orientamento, abitudini e priorita del cliente.</p>
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[.16em] text-forest">Limiti della stima</p>
-                  <p className="mt-3 leading-7 text-graphite/65">Il beneficio reale dipende da edificio, consumi, prezzi energia, incentivi disponibili e verifiche tecniche.</p>
-                </div>
-              </div>
-              <div className="mt-8 grid gap-3 sm:grid-cols-4">
-                {["Contesto edificio", "Ipotesi di intervento", "Priorita operative", "Stima da validare"].map((item) => (
-                  <strong key={item} className="rounded-lg bg-warm p-4 text-center text-xl tracking-tight text-forest">
-                    {item}
-                  </strong>
-                ))}
-              </div>
-              <Link href="/contatti" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-bold text-white">
-                Vuoi verificare se questa simulazione regge sul tuo edificio?
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
 
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
@@ -594,7 +517,7 @@ export default function HomePage() {
             <p className="mt-6 leading-8 text-graphite/65">Risposte commerciali e tecniche per orientarti prima della verifica preliminare.</p>
           </FadeIn>
           <div className="grid gap-3">
-            {faqs.map((faq) => (
+            {faqs.slice(0, 3).map((faq) => (
               <FadeIn key={faq.question} className="rounded-lg border border-graphite/10 bg-warm p-5">
                 <h3 className="text-xl font-semibold tracking-tight">{faq.question}</h3>
                 <p className="mt-3 leading-7 text-graphite/65">{faq.answer}</p>
@@ -608,13 +531,13 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.9fr_1.1fr]">
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Area servita</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Dove opera GeoDomus?</h2>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Progetti energetici e case in legno in Friuli Venezia Giulia</h2>
             <p className="mt-6 text-lg leading-8 text-graphite/65">
-              GeoDomus lavora a Udine, in provincia di Udine e nelle principali aree del Friuli Venezia Giulia: Pordenone, Gorizia, Trieste e comuni limitrofi.
+              Lavoriamo su progetti in provincia di Udine, Pordenone, Gorizia e Trieste, con particolare attenzione a clima, vincoli locali, caratteristiche degli edifici, disponibilita di spazio tecnico e integrazione tra involucro e impianti.
             </p>
-            <p className="mt-5 leading-8 text-graphite/60">
-              Il riferimento locale aiuta a valutare clima, esposizione, vincoli urbanistici, coperture e incentivi FVG 2026 prima di definire l'intervento.
-            </p>
+            <Link href="/contatti" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-bold text-white">
+              Verifica il tuo progetto nel tuo comune
+            </Link>
           </FadeIn>
           <FadeIn className="overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
             <div className="relative aspect-[16/8]">
@@ -622,11 +545,16 @@ export default function HomePage() {
             </div>
             <div className="p-6">
               <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Zone principali</p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {geoAreas.map((area) => (
-                  <span key={area} className="rounded-md border border-graphite/10 bg-warm px-3 py-2 text-sm font-semibold text-graphite/70">
-                    {area}
-                  </span>
+              <div className="mt-5 grid gap-3">
+                {[
+                  ["Udine e provincia", "Interventi su abitazioni, nuove costruzioni, riqualificazioni e impianti integrati per famiglie e proprietari di edifici esistenti."],
+                  ["Aree rurali e agricole", "Soluzioni per aziende agricole, contesti con disponibilita di biomassa, spazi tecnici e fabbisogni energetici piu elevati."],
+                  ["Strutture ricettive", "Valutazioni per agriturismi, B&B e strutture che devono controllare consumi, comfort e continuita di servizio."]
+                ].map(([title, text]) => (
+                  <div key={title} className="rounded-md border border-graphite/10 bg-warm p-4">
+                    <h3 className="font-semibold">{title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-graphite/62">{text}</p>
+                  </div>
                 ))}
               </div>
               <div className="mt-6 grid gap-2 text-sm leading-6 text-graphite/62">
@@ -640,8 +568,8 @@ export default function HomePage() {
       </section>
 
       <CTA
-        title="Pronto a iniziare il progetto chiavi in mano?"
-        text="Inviaci le informazioni essenziali su terreno, edificio o riqualificazione. Ti ricontattiamo per capire fattibilita, percorso tecnico e prossimi passi operativi."
+        title="Hai gia un'idea, un terreno, un edificio o dei preventivi separati?"
+        text="Inviaci i dati principali. Ti diciamo quali informazioni mancano, quali criticita valutare e quale percorso tecnico seguire prima di impegnarti economicamente."
       />
     </main>
   );

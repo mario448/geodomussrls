@@ -29,7 +29,7 @@ export default function SolarPage() {
       mistakes={["Dimensionare solo sulla superficie disponibile", "Ignorare le fasce orarie di consumo", "Aggiungere accumulo senza verificarne l'uso reale", "Trascurare ombre, vincoli o stato della copertura", "Confrontare preventivi con potenze e componenti non equivalenti"]}
       process={["Analisi consumi e profilo energetico", "Verifica copertura, orientamento e ombre", "Dimensionamento impianto e accumulo", "Installazione e collaudo", "Monitoraggio e assistenza"]}
       faqs={faqs.solar}
-      cta="Analizza il mio potenziale fotovoltaico"
+      cta="Fai controllare il dimensionamento prima di comprare un impianto"
     />
   );
 }
