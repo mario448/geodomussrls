@@ -10,6 +10,8 @@ const routes = [
   "/soluzioni-integrate",
   "/chi-siamo",
   "/contatti",
+  "/privacy-policy",
+  "/cookie-policy",
   "/blog"
 ];
 

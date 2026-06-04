@@ -3,6 +3,7 @@ export const site = {
   url: "https://www.geodomussrls.it",
   phone: "+39 0432 184 620",
   email: "info@geodomussrls.it",
+  privacyEmail: "info@geodomussrls.it",
   address: "Via delle Energie 18, 33100 Udine UD",
   area: "Udine, provincia di Udine e Friuli Venezia Giulia",
   description:

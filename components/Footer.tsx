@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-graphite px-5 py-14 text-white lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 border-b border-white/10 pb-10 lg:grid-cols-[1.2fr_.8fr_.8fr]">
+        <div className="grid gap-8 border-b border-white/10 pb-10 lg:grid-cols-[1.2fr_.7fr_.7fr_.6fr]">
           <div>
             <p className="text-4xl font-semibold tracking-tight lg:text-7xl">GeoDomus srls</p>
             <p className="mt-5 max-w-xl text-white/60">
@@ -30,6 +30,15 @@ export function Footer() {
             </Link>
             <Link href="/blog" className="hover:text-white">
               Blog
+            </Link>
+          </div>
+          <div className="grid gap-3 text-sm text-white/65">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-timber">Privacy</p>
+            <Link href="/privacy-policy" className="hover:text-white">
+              Privacy policy
+            </Link>
+            <Link href="/cookie-policy" className="hover:text-white">
+              Cookie policy
             </Link>
           </div>
         </div>

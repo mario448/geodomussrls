@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FadeIn } from "@/components/Motion";
+import Link from "next/link";
 import { site } from "@/data/site";
 import { pageMetadata } from "@/lib/seo";
 
@@ -63,7 +64,22 @@ export default function ContactPage() {
               <label className="grid gap-2 text-sm text-graphite/60">Tempi previsti<select name="timing" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Subito</option><option>Entro 3 mesi</option><option>Entro 6 mesi</option><option>Entro 12 mesi</option><option>Sto valutando</option></select></label>
               <label className="grid gap-2 text-sm text-graphite/60">Hai documenti disponibili?<select name="documentsAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Bollette</option><option>Foto tetto</option><option>Planimetrie</option><option>Progetto tecnico</option><option>Preventivi ricevuti</option><option>Nessun documento</option></select></label>
               <label className="grid gap-2 text-sm text-graphite/60">Messaggio<textarea required name="message" rows={5} className="rounded-md border border-graphite/10 p-4 text-graphite" /></label>
-              <label className="flex gap-3 text-sm leading-6 text-graphite/60"><input required type="checkbox" name="privacy" className="mt-1" /> Accetto il trattamento dei dati per essere ricontattato da GeoDomus.</label>
+              <label className="flex gap-3 text-sm leading-6 text-graphite/60">
+                <input required type="checkbox" name="privacy" className="mt-1" />
+                <span>
+                  Ho letto la{" "}
+                  <Link href="/privacy-policy" className="font-semibold text-forest underline underline-offset-4">
+                    privacy policy
+                  </Link>{" "}
+                  e autorizzo il trattamento dei dati per essere ricontattato in merito alla richiesta inviata.
+                </span>
+              </label>
+              <label className="flex gap-3 text-sm leading-6 text-graphite/60">
+                <input type="checkbox" name="marketingConsent" className="mt-1" />
+                <span>
+                  Acconsento a ricevere comunicazioni informative o promozionali da GeoDomus. Il consenso e facoltativo e revocabile in qualsiasi momento.
+                </span>
+              </label>
               <p className="text-sm leading-6 text-graphite/55">Piu dati fornisci, piu utile sara la prima risposta. Non proponiamo pacchetti standard senza capire edificio, consumi e obiettivi.</p>
               <button type="submit" className="min-h-12 rounded-md bg-graphite px-6 font-semibold text-white">Invia richiesta di valutazione</button>
               <p className="text-sm leading-6 text-graphite/55">Richiesta ricevuta. Analizzeremo i dati inviati e ti ricontatteremo per indicarti il prossimo passo utile: raccolta documenti, sopralluogo, confronto tecnico o preventivo preliminare.</p>
