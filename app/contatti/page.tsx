@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Richiedi una verifica tecnica preliminare",
+  title: "Avvia un progetto GeoDomus chiavi in mano",
   description:
     "Invia a GeoDomus srls i dati minimi su edificio, consumi e obiettivi per valutare case in legno, fotovoltaico, biomassa e soluzioni integrate in FVG.",
   path: "/contatti",
@@ -36,9 +36,9 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Contatti</p>
-            <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Richiedi una verifica tecnica preliminare</h1>
+            <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Avvia un progetto GeoDomus chiavi in mano</h1>
             <p className="mt-6 text-xl leading-9 text-graphite/65">
-              Non partire da un preventivo generico. Inviaci i dati minimi e capiamo quale intervento ha senso per il tuo edificio.
+              Non partire da fornitori separati. Inviaci i dati minimi e capiamo come impostare progettazione, realizzazione e installazione in un unico percorso.
             </p>
             <div className="mt-8 grid gap-3 text-graphite/65">
               <p>
@@ -64,7 +64,7 @@ export default function ContactPage() {
               <label className="grid gap-2 text-sm text-graphite/60">Hai bollette, foto o planimetrie disponibili?<select name="documentsAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Si</option><option>No</option></select></label>
               <label className="grid gap-2 text-sm text-graphite/60">Messaggio<textarea required name="message" rows={5} className="rounded-md border border-graphite/10 p-4 text-graphite" /></label>
               <p className="text-sm leading-6 text-graphite/55">Piu dati fornisci, piu utile sara la prima risposta. Non proponiamo pacchetti standard senza capire edificio, consumi e obiettivi.</p>
-              <button type="submit" className="min-h-12 rounded-md bg-graphite px-6 font-semibold text-white">Invia richiesta di verifica</button>
+              <button type="submit" className="min-h-12 rounded-md bg-graphite px-6 font-semibold text-white">Avvia il progetto con GeoDomus</button>
               <p className="text-sm leading-6 text-graphite/55">Dopo l'invio ti ricontatteremo entro 1 giorno lavorativo per fissare un primo colloquio telefonico gratuito di 20 minuti.</p>
             </form>
           </FadeIn>

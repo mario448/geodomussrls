@@ -26,43 +26,43 @@ export const metadata = pageMetadata({
 });
 
 const proofPoints = [
-  { value: "Consulenza tecnica", label: "Analisi iniziale di edificio, consumi, obiettivi e vincoli prima di proporre soluzioni." },
-  { value: "Progetto coordinato", label: "Casa, fotovoltaico e biomassa valutati insieme per evitare scelte scollegate." },
-  { value: "Realizzazione", label: "Percorso seguito fino alla fase operativa, con coordinamento tecnico degli interventi." }
+  { value: "Un solo referente", label: "Un percorso unico per casa, fotovoltaico e biomassa, senza responsabilita disperse tra fornitori diversi." },
+  { value: "Progetto + cantiere", label: "Le scelte tecniche vengono pensate in funzione della realizzazione, non solo del disegno iniziale." },
+  { value: "Chiavi in mano", label: "Dall'idea alla consegna: analisi, progetto, coordinamento operativo, installazione e collaudo." }
 ];
 
 const risks = [
-  "Fotovoltaico dimensionato senza analisi dei consumi",
-  "Generatore termico scelto senza valutare involucro e fabbisogno",
-  "Casa in legno progettata senza integrare davvero gli impianti",
-  "Preventivi separati difficili da confrontare"
+  "Progettista, impresa edile e installatori che non lavorano sulla stessa sequenza tecnica",
+  "Casa in legno realizzata senza predisporre davvero fotovoltaico e locale tecnico",
+  "Fotovoltaico aggiunto dopo, con passaggi, quadri e accumulo gestiti come varianti",
+  "Biomassa scelta quando spazi, canna fumaria e fabbisogno non sono stati previsti in progetto"
 ];
 
 const offerCards = [
   {
     title: "Casa in legno",
-    text: "Analisi preliminare, valutazione del progetto, coordinamento tecnico e impostazione delle scelte energetiche prima della realizzazione.",
+    text: "Progettiamo e realizziamo case prefabbricate in legno predisposte fin dall'inizio per impianti, comfort, isolamento e tempi di cantiere.",
     href: "/case-prefabbricate-legno-udine",
     image: "/images/case-legno-geodomus.jpg",
     alt: "Dettaglio di casa prefabbricata in legno"
   },
   {
     title: "Fotovoltaico",
-    text: "Analisi bollette, verifica copertura, dimensionamento impianto, accumulo, autoconsumo, realizzazione e ritorno dell'investimento.",
+    text: "Progettiamo e installiamo il fotovoltaico dentro la logica dell'edificio: copertura, passaggi, quadri, accumulo e autoconsumo.",
     href: "/fotovoltaico-udine-fvg",
     image: "/images/fotovoltaico-geodomus.jpg",
     alt: "Pannelli fotovoltaici su copertura"
   },
   {
     title: "Biomassa",
-    text: "Valutazione del fabbisogno termico, spazio tecnico, disponibilita del combustibile, manutenzione, realizzazione e compatibilita con l'edificio.",
+    text: "Dimensioniamo e realizziamo sistemi a biomassa valutando fabbisogno, deposito combustibile, locale tecnico, manutenzione e integrazione con la casa.",
     href: "/riscaldamento-biomassa-udine",
     image: "/images/biomassa-geodomus.jpg",
     alt: "Locale tecnico per impianto a biomassa"
   },
   {
     title: "Soluzioni integrate",
-    text: "Regia unica tra consulenza, progetto, involucro, produzione elettrica, generazione termica e realizzazione.",
+    text: "Un'unica regia tra progettazione, cantiere, involucro, produzione elettrica, generazione termica, installazione e collaudo.",
     href: "/soluzioni-integrate",
     image: "/images/villa-geodomus-hero-v2.jpg",
     alt: "Abitazione moderna con sistemi energetici integrati"
@@ -71,38 +71,38 @@ const offerCards = [
 
 const paths = [
   {
-    title: "Sto costruendo casa",
-    text: "Ti aiutiamo a impostare involucro, impianti e produzione energetica prima che le scelte diventino costose da correggere.",
-    cta: "Valuta nuova costruzione"
+    title: "Famiglie che vogliono costruire",
+    text: "Realizziamo il percorso completo: casa in legno, impianti integrati, fotovoltaico, biomassa e consegna coordinata.",
+    cta: "Avvia il progetto casa"
   },
   {
-    title: "Ho gia una casa",
-    text: "Analizziamo consumi, tetto, impianto termico e priorita. Non sempre conviene partire dal fotovoltaico.",
-    cta: "Analizza la mia abitazione"
+    title: "Proprietari che riqualificano",
+    text: "Coordiniamo interventi su involucro, tetto, impianti e priorita operative per evitare lavori scollegati.",
+    cta: "Organizza gli interventi"
   },
   {
-    title: "Ho un'azienda agricola o struttura ricettiva",
-    text: "Verifichiamo consumi elettrici, fabbisogno termico, biomassa disponibile, superfici e ritorno dell'investimento.",
-    cta: "Richiedi valutazione aziendale"
+    title: "Aziende agricole e strutture ricettive",
+    text: "Realizziamo soluzioni energetiche integrate valutando consumi, biomassa disponibile, superfici, continuita d'uso e cantiere.",
+    cta: "Valuta il progetto aziendale"
   }
 ];
 
 const completePath = [
   {
-    title: "Consulenza preliminare",
-    text: "Raccogliamo dati, obiettivi e vincoli tecnici per capire da dove partire e cosa evitare."
+    title: "Primo contatto",
+    text: "Raccogliamo obiettivi, budget indicativo, contesto dell'edificio o del terreno e tempi desiderati."
   },
   {
-    title: "Progettazione e coordinamento",
-    text: "Mettiamo in relazione casa, fotovoltaico, biomassa, budget e sequenza degli interventi."
+    title: "Verifica tecnica",
+    text: "Valutiamo fattibilita, accessi, vincoli, copertura, impianti esistenti e dati energetici disponibili."
   },
   {
-    title: "Realizzazione operativa",
-    text: "Seguiamo il passaggio dalla valutazione alla realizzazione, coordinando fornitori, progettisti e installatori coinvolti."
+    title: "Progetto esecutivo",
+    text: "Definiamo casa, fotovoltaico, biomassa, materiali, impianti, priorita e cronoprogramma coerente."
   },
   {
-    title: "Assistenza e continuita",
-    text: "Restiamo il riferimento tecnico per aggiornamenti, manutenzione, ottimizzazioni e successive fasi di intervento."
+    title: "Cantiere e consegna",
+    text: "Coordiniamo realizzazione, installazione, collaudo e assistenza post-intervento con un unico referente."
   }
 ];
 
@@ -158,19 +158,19 @@ const visualStory = [
 ];
 
 const steps = [
-  { title: "Dati", text: "Raccogliamo bollette, consumi, informazioni sull'edificio, tetto, impianti esistenti, budget e obiettivi." },
-  { title: "Diagnosi", text: "Individuiamo criticita, priorita e vincoli: cosa conviene valutare subito, cosa puo aspettare, cosa potrebbe non avere senso." },
-  { title: "Disegno tecnico", text: "Definiamo la configurazione tra involucro, fotovoltaico, accumulo, biomassa e altri impianti." },
-  { title: "Decisione", text: "Costruiamo una sequenza di interventi: cosa fare ora, cosa fare dopo, cosa evitare." },
-  { title: "Direzione", text: "Coordiniamo il percorso tecnico e operativo fino alla realizzazione con fornitori, progettisti e installatori coinvolti." }
+  { title: "Dati e obiettivo", text: "Raccogliamo informazioni su terreno o edificio, consumi, budget indicativo, tempi, vincoli e aspettative." },
+  { title: "Progettazione integrata", text: "Casa in legno, fotovoltaico e biomassa vengono progettati insieme, prima che il cantiere generi varianti costose." },
+  { title: "Preventivo coerente", text: "Il cliente confronta una soluzione completa, non tre preventivi separati con responsabilita diverse." },
+  { title: "Realizzazione coordinata", text: "GeoDomus coordina cantiere, forniture, installazioni e controlli tecnici secondo un cronoprogramma condiviso." },
+  { title: "Collaudo e assistenza", text: "Verifichiamo impianti, funzionamento e documentazione finale, restando il riferimento unico dopo l'intervento." }
 ];
 
 const comparison = [
-  ["Ogni fornitore vende il proprio pezzo", "Analisi unica di edificio, consumi e obiettivi"],
-  ["Il fotovoltaico viene proposto prima di analizzare davvero i consumi", "Dimensionamento basato su dati reali"],
-  ["L'impianto termico viene scelto senza valutare l'intero edificio", "Priorita tra interventi definite prima del preventivo finale"],
-  ["I preventivi sono difficili da confrontare", "Casa e impianti ragionati come sistema"],
-  ["Il cliente deve coordinare tutto da solo", "Un referente coordina il percorso tecnico"]
+  ["Ogni fornitore vende il proprio pezzo", "Una sola regia tra casa, fotovoltaico e biomassa"],
+  ["Il progettista disegna e poi il cliente cerca chi realizza", "Il progetto nasce gia pensando a cantiere, impianti e installazioni"],
+  ["Fotovoltaico e biomassa arrivano dopo come aggiunte", "Passaggi tecnici, locali, quadri e predisposizioni sono previsti prima"],
+  ["I preventivi sono difficili da confrontare", "Il cliente valuta una soluzione completa e coerente"],
+  ["Se qualcosa non funziona, le responsabilita si scaricano", "Un referente coordina qualita, tempi, verifiche e assistenza"]
 ];
 
 const faqs = [
@@ -249,25 +249,25 @@ export default function HomePage() {
           <FadeIn className="max-w-4xl rounded-lg border border-white/20 bg-graphite/76 p-5 shadow-[0_32px_90px_rgba(0,0,0,.38)] backdrop-blur-sm sm:p-7 lg:p-9">
             <p className="text-xs font-extrabold uppercase tracking-[.18em] text-[#f2bd83]">GeoDomus srls / Udine e Friuli Venezia Giulia</p>
             <h1 className="mt-5 max-w-5xl text-6xl font-semibold tracking-tight text-white md:text-8xl lg:text-9xl">
-              Casa, fotovoltaico e biomassa progettati come un unico sistema.
+              Progettiamo, realizziamo e installiamo la tua casa green chiavi in mano.
             </h1>
             <p className="mt-6 max-w-3xl text-lg font-semibold leading-8 text-white">
-              Prima analizziamo edificio, consumi, tetto, impianti e budget. Poi definiamo quali interventi fare, in che ordine e con quali priorita.
+              Case in legno, fotovoltaico e biomassa in un unico percorso operativo: una sola regia, un solo referente, una sequenza tecnica coordinata dall'idea al cantiere.
             </p>
             <p className="mt-4 max-w-3xl leading-8 text-white/86">
-              Cosi eviti impianti sovradimensionati, costi nascosti e scelte energetiche scollegate.
+              Non devi cercare progettisti, imprese e installatori separati. GeoDomus coordina progettazione, realizzazione, installazione, collaudo e assistenza.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <div>
                 <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-bold text-graphite shadow-lg shadow-black/25">
-                  Richiedi una verifica tecnica preliminare
+                  Voglio iniziare il progetto chiavi in mano
                 </Link>
                 <p className="mt-2 max-w-xl text-sm font-medium text-white/70">
-                  Partiamo da dati concreti: bollette, edificio, obiettivi e vincoli tecnici. Nessun preventivo serio nasce senza analisi.
+                  Primo confronto gratuito di 20 minuti per capire terreno, edificio, budget, obiettivi e prossimi passi.
                 </p>
               </div>
               <Link href="#metodo-geodomus" className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/45 bg-white/16 px-6 font-bold text-white backdrop-blur">
-                Scopri il metodo GeoDomus
+                Mostrami come funziona
               </Link>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -283,15 +283,65 @@ export default function HomePage() {
       </section>
 
       <section className="bg-white px-5 py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.78fr_1.22fr]">
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Impresa integrata</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Come funziona GeoDomus: una sola azienda, non dieci interlocutori.</h2>
+            <p className="mt-6 text-lg leading-8 text-graphite/65">
+              GeoDomus non si limita a consegnare una consulenza e lasciare al cliente il compito di cercare progettisti, imprese e installatori. Il valore e avere un unico percorso: progettazione, realizzazione, installazione e collaudo vengono coordinati dentro la stessa regia operativa.
+            </p>
+          </FadeIn>
+          <div className="grid gap-4 lg:grid-cols-3">
+            {[
+              {
+                title: "Progettiamo quello che realizziamo",
+                text: "Le scelte su struttura, impianti, passaggi tecnici, tetto e locale termico vengono pensate insieme, prima del cantiere."
+              },
+              {
+                title: "Coordiniamo il cantiere",
+                text: "Il cliente non deve rincorrere fornitori separati: GeoDomus mantiene la regia tecnica tra casa, fotovoltaico e biomassa."
+              },
+              {
+                title: "Un riferimento unico",
+                text: "Domande, varianti, verifiche e assistenza passano da un unico referente, riducendo scarichi di responsabilita e tempi morti."
+              }
+            ].map((item) => (
+              <FadeIn key={item.title} className="rounded-lg border border-graphite/10 bg-warm p-6">
+                <h3 className="text-2xl font-semibold tracking-tight">{item.title}</h3>
+                <p className="mt-4 leading-7 text-graphite/65">{item.text}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            { src: "/images/case-legno-geodomus.jpg", alt: "Casa in legno GeoDomus", label: "Struttura in legno" },
+            { src: "/images/fotovoltaico-geodomus.jpg", alt: "Fotovoltaico integrato su tetto", label: "Tetto e fotovoltaico" },
+            { src: "/images/biomassa-geodomus.jpg", alt: "Impianto a biomassa", label: "Locale tecnico" },
+            { src: "/images/villa-geodomus-hero-v2.jpg", alt: "Abitazione efficiente chiavi in mano", label: "Consegna coordinata" }
+          ].map((image) => (
+            <FadeIn key={image.src} className="relative min-h-[250px] overflow-hidden rounded-lg bg-graphite shadow-soft">
+              <Image src={image.src} alt={image.alt} fill quality={78} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-graphite/70 via-transparent to-transparent" aria-hidden="true" />
+              <p className="absolute bottom-4 left-4 right-4 text-xl font-semibold tracking-tight text-white">{image.label}</p>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.82fr_1.18fr]">
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Problema</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Il rischio non e spendere troppo. E spendere nell'ordine sbagliato.</h2>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Il rischio non e solo spendere troppo. E avere responsabilita divise.</h2>
             <p className="mt-6 text-lg leading-8 text-graphite/65">
-              Molti partono dal singolo intervento: prima il fotovoltaico, poi la caldaia, poi l'isolamento, poi magari una nuova costruzione. Il problema e che edificio, impianti e consumi si influenzano tra loro. Senza una strategia unica si rischia di installare componenti corretti singolarmente, ma inefficienti come sistema.
+              Molti percorsi partono con un progettista, poi un'impresa, poi un installatore fotovoltaico, poi un tecnico per il riscaldamento. Il problema e che edificio, impianti e consumi si influenzano tra loro. Se ogni parte lavora separata, il cliente resta in mezzo a preventivi, varianti e responsabilita difficili da gestire.
             </p>
             <Link href="/contatti" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-bold text-white">
-              Evita un investimento scollegato
+              Evita un cantiere frammentato
             </Link>
           </FadeIn>
           <div className="grid gap-4 md:grid-cols-2">
@@ -307,10 +357,10 @@ export default function HomePage() {
       <section id="soluzioni" className="px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <FadeIn className="max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Cosa fa GeoDomus</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Cosa puoi affidare a GeoDomus</h2>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Cosa realizziamo</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Le tre cose che realizziamo e come le integriamo.</h2>
             <p className="mt-5 text-lg leading-8 text-graphite/65">
-              GeoDomus lavora su casa in legno, fotovoltaico, biomassa e priorita energetiche come parti dello stesso sistema tecnico.
+              Non sono tre servizi separati. Sono parti di un'unica soluzione in cui ogni scelta condiziona le altre: struttura, impianti, produzione elettrica, calore e gestione futura.
             </p>
           </FadeIn>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -330,7 +380,7 @@ export default function HomePage() {
             ))}
           </div>
           <Link href="/contatti" className="mt-10 inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-bold text-white">
-            Trova la soluzione adatta al tuo edificio
+            Voglio vedere come integrare questi elementi nel mio progetto
           </Link>
         </div>
       </section>
@@ -338,8 +388,8 @@ export default function HomePage() {
       <section className="bg-stone/55 px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <FadeIn className="max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Percorsi</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Da dove parti?</h2>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Per chi lavoriamo</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Realizziamo percorsi diversi, con la stessa regia integrata.</h2>
           </FadeIn>
           <div className="mt-12 grid gap-4 lg:grid-cols-3">
             {paths.map((path) => (
@@ -358,13 +408,13 @@ export default function HomePage() {
       <section id="metodo-geodomus" className="bg-graphite px-5 py-20 text-white lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <FadeIn>
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-timber">Metodo GeoDomus 5D</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Un processo pensato per evitare interventi scollegati.</h2>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-timber">Dal contatto alla consegna</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Il processo GeoDomus per arrivare al chiavi in mano.</h2>
             <p className="mt-6 max-w-xl leading-8 text-white/65">
-              Un processo pensato per evitare interventi scollegati e preventivi difficili da confrontare.
+              Non e una consulenza che finisce con un PDF. E un percorso operativo: primo contatto, verifica tecnica, progetto integrato, cantiere, installazioni, collaudo e assistenza.
             </p>
             <Link href="/contatti" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-bold text-graphite">
-              Scopri come lavoriamo
+              Prenota il primo confronto
             </Link>
             <div className="relative mt-10 aspect-[4/3] overflow-hidden rounded-lg border border-white/10">
               <Image
@@ -412,6 +462,32 @@ export default function HomePage() {
           <Link href="/contatti" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-bold text-white">
             Fai valutare il progetto prima di comprare singoli impianti
           </Link>
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Contratto e garanzie</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Una regia contrattuale, non dieci responsabilita separate.</h2>
+            <p className="mt-6 leading-8 text-graphite/65">
+              Il valore di un percorso integrato non e solo tecnico. E anche contrattuale: cosa e incluso, chi risponde di cosa, quali fasi sono previste, quali garanzie si applicano e quali manutenzioni servono dopo la consegna devono essere chiari prima di iniziare.
+            </p>
+          </FadeIn>
+          <div className="grid gap-4 md:grid-cols-2">
+            {[
+              "Responsabilita operative definite prima del cantiere",
+              "Capitolato leggibile: struttura, impianti, fotovoltaico, biomassa e finiture",
+              "Cronoprogramma condiviso con fasi, vincoli e dipendenze tecniche",
+              "Garanzie da indicare in contratto: [DA COMPLETARE: dettagli garanzie applicabili]",
+              "Assistenza post-intervento: [DA COMPLETARE: modalita e durata]",
+              "Un referente unico per comunicazioni, varianti e verifiche"
+            ].map((item) => (
+              <FadeIn key={item} className="rounded-lg border border-graphite/10 bg-warm p-6">
+                <p className="text-xl font-semibold">{item}</p>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -564,8 +640,8 @@ export default function HomePage() {
       </section>
 
       <CTA
-        title="Richiedi una verifica tecnica preliminare"
-        text="Inviaci le informazioni essenziali sul tuo edificio o progetto. Ti aiuteremo a capire da quale intervento partire, quali dati servono e quali scelte evitare."
+        title="Pronto a iniziare il progetto chiavi in mano?"
+        text="Inviaci le informazioni essenziali su terreno, edificio o riqualificazione. Ti ricontattiamo per capire fattibilita, percorso tecnico e prossimi passi operativi."
       />
     </main>
   );

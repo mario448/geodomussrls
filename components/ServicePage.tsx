@@ -27,6 +27,13 @@ export type ServicePageProps = {
 };
 
 export function ServicePage(props: ServicePageProps) {
+  const serviceVisuals = [
+    { src: props.image, alt: props.imageAlt, label: props.title },
+    { src: "/images/home-cantiere-legno-geodomus.jpg", alt: "Dettaglio di struttura e involucro in legno", label: "Cantiere e involucro" },
+    { src: "/images/home-fotovoltaico-tetto-geodomus.jpg", alt: "Pannelli fotovoltaici su tetto efficiente", label: "Fotovoltaico integrato" },
+    { src: "/images/home-biomassa-locale-geodomus.jpg", alt: "Locale tecnico con impianto a biomassa", label: "Biomassa e impianti" }
+  ];
+
   return (
     <main>
       <JsonLd data={serviceJsonLd(props.title, props.description, props.path)} />
@@ -56,6 +63,25 @@ export function ServicePage(props: ServicePageProps) {
               className="object-cover"
             />
           </FadeIn>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {serviceVisuals.map((image) => (
+            <FadeIn key={`${props.path}-${image.src}`} className="relative min-h-[240px] overflow-hidden rounded-lg bg-graphite shadow-soft">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                quality={78}
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-graphite/72 via-graphite/8 to-transparent" aria-hidden="true" />
+              <p className="absolute bottom-4 left-4 right-4 text-xl font-semibold tracking-tight text-white">{image.label}</p>
+            </FadeIn>
+          ))}
         </div>
       </section>
 

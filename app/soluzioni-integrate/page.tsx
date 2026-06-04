@@ -32,6 +32,13 @@ const usefulFor = [
   "Chi vuole procedere per fasi senza sbagliare ordine"
 ];
 
+const integratedGallery = [
+  { src: "/images/villa-geodomus-hero-v3.jpg", alt: "Casa moderna efficiente", label: "Sistema abitativo" },
+  { src: "/images/home-cantiere-legno-geodomus.jpg", alt: "Dettaglio struttura in legno", label: "Involucro" },
+  { src: "/images/home-fotovoltaico-tetto-geodomus.jpg", alt: "Fotovoltaico su copertura", label: "Produzione elettrica" },
+  { src: "/images/home-biomassa-locale-geodomus.jpg", alt: "Locale tecnico biomassa", label: "Generazione termica" }
+];
+
 export default function IntegratedPage() {
   return (
     <main>
@@ -81,6 +88,23 @@ export default function IntegratedPage() {
               </p>
             </FadeIn>
           ))}
+        </div>
+      </section>
+      <section className="bg-stone/55 px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Integrazione visiva</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Ogni scelta tecnica deve stare dentro lo stesso progetto.</h2>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {integratedGallery.map((image) => (
+              <FadeIn key={image.src} className="relative min-h-[260px] overflow-hidden rounded-lg bg-graphite shadow-soft">
+                <Image src={image.src} alt={image.alt} fill quality={78} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-graphite/74 via-transparent to-transparent" aria-hidden="true" />
+                <p className="absolute bottom-4 left-4 right-4 text-xl font-semibold tracking-tight text-white">{image.label}</p>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
       <section className="px-5 py-20 lg:px-8">
