@@ -15,12 +15,21 @@ export const metadata = pageMetadata({
 });
 
 const modules = [
-  "Casa in legno + fotovoltaico + biomassa",
-  "Indipendenza energetica progettata sui consumi reali",
-  "Riduzione dei costi nel lungo periodo",
-  "Comfort termico, acustico e gestionale",
-  "Materiali sostenibili e impianti coordinati",
-  "Progettazione su misura per Udine e FVG"
+  "Priorita degli interventi",
+  "Soluzioni da escludere",
+  "Possibili fasi operative",
+  "Criticita tecniche",
+  "Dati mancanti da raccogliere",
+  "Indicazioni per confrontare preventivi"
+];
+
+const usefulFor = [
+  "Chi costruisce casa",
+  "Chi ristruttura",
+  "Chi ha consumi energetici elevati",
+  "Aziende agricole",
+  "Strutture ricettive",
+  "Chi vuole procedere per fasi senza sbagliare ordine"
 ];
 
 export default function IntegratedPage() {
@@ -30,19 +39,28 @@ export default function IntegratedPage() {
       <section className="px-5 pb-16 pt-10 lg:px-8">
         <FadeIn className="mx-auto max-w-7xl">
           <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Sistema GeoDomus</p>
-          <h1 className="mt-5 max-w-5xl text-6xl font-semibold tracking-tight md:text-8xl">Non singoli prodotti. Un ecosistema abitativo.</h1>
+          <h1 className="mt-5 max-w-5xl text-6xl font-semibold tracking-tight md:text-8xl">Prima la strategia energetica. Poi gli impianti.</h1>
           <p className="mt-7 max-w-3xl text-xl leading-9 text-graphite/65">
-            GeoDomus integra casa prefabbricata in legno, impianto fotovoltaico e riscaldamento a biomassa in un progetto coerente. L'obiettivo non e vendere componenti separati, ma creare una soluzione sostenibile, efficiente e facile da gestire nel tempo.
+            Casa, fotovoltaico e biomassa non devono essere scelti come pezzi separati. GeoDomus costruisce una sequenza di interventi coerente con edificio, consumi, budget e obiettivi.
           </p>
+          <Link href="/contatti" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-semibold text-white">
+            Richiedi una valutazione integrata
+          </Link>
         </FadeIn>
       </section>
       <section className="bg-white px-5 py-20 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {modules.map((item) => (
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Per chi e utile</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Quando serve una regia unica prima dei preventivi.</h2>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {usefulFor.map((item) => (
             <FadeIn key={item} className="rounded-lg border border-graphite/10 bg-warm p-7 shadow-soft">
               <p className="text-2xl font-semibold tracking-tight">{item}</p>
             </FadeIn>
           ))}
+          </div>
         </div>
       </section>
       <section className="px-5 py-20 lg:px-8">
@@ -66,18 +84,24 @@ export default function IntegratedPage() {
         </div>
       </section>
       <section className="px-5 py-20 lg:px-8">
-        <FadeIn className="mx-auto max-w-4xl prose-geodomus">
-          <h2>Perche l'integrazione cambia il risultato</h2>
-          <p>
-            Una casa efficiente funziona meglio quando involucro, produzione elettrica, accumulo, generazione termica e abitudini di utilizzo vengono letti nello stesso momento. Una copertura puo ospitare fotovoltaico, ma il dimensionamento corretto dipende da consumi, esposizione e sistemi termici. Una caldaia a biomassa puo ridurre i costi, ma deve essere coerente con isolamento, distribuzione del calore e spazio tecnico.
-          </p>
-          <p>
-            L'approccio integrato di GeoDomus permette di progettare soluzioni su misura per abitazioni, aziende agricole, strutture ricettive e piccoli imprenditori in Friuli Venezia Giulia. La consulenza parte da esigenze concrete: comfort, indipendenza energetica, budget, tempi, manutenzione e sostenibilita.
-          </p>
-          <Link href="/contatti">Parla con GeoDomus</Link>
-        </FadeIn>
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Output tecnico</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Cosa produce una valutazione integrata</h2>
+            <p className="mt-6 leading-8 text-graphite/65">
+              Una valutazione integrata non serve a vendere tutto insieme. Serve a capire cosa fare, cosa rimandare e cosa evitare.
+            </p>
+          </FadeIn>
+          <div className="grid gap-4 md:grid-cols-2">
+            {modules.map((item) => (
+              <FadeIn key={item} className="rounded-lg border border-graphite/10 bg-white p-6 shadow-soft">
+                <p className="text-xl font-semibold">{item}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
       </section>
-      <CTA title="Vuoi progettare casa ed energia insieme?" text="Una soluzione integrata riduce errori, sovradimensionamenti e costi nascosti." />
+      <CTA title="Richiedi una valutazione integrata" text="Analizziamo edificio, consumi, budget e obiettivi per costruire una sequenza tecnica coerente prima di acquistare singoli impianti." />
     </main>
   );
 }

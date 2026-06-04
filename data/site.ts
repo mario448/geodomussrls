@@ -6,14 +6,13 @@ export const site = {
   address: "Via delle Energie 18, 33100 Udine UD",
   area: "Udine, provincia di Udine e Friuli Venezia Giulia",
   description:
-    "GeoDomus srls realizza case prefabbricate in legno, impianti fotovoltaici e sistemi di riscaldamento a biomassa in Friuli Venezia Giulia.",
+    "GeoDomus srls segue consulenza, progettazione, coordinamento e realizzazione di case prefabbricate in legno, impianti fotovoltaici e sistemi di riscaldamento a biomassa in Friuli Venezia Giulia.",
   nav: [
     { href: "/", label: "Home" },
     { href: "/case-prefabbricate-legno-udine", label: "Case in legno" },
     { href: "/fotovoltaico-udine-fvg", label: "Fotovoltaico" },
     { href: "/riscaldamento-biomassa-udine", label: "Biomassa" },
     { href: "/soluzioni-integrate", label: "Soluzioni integrate" },
-    { href: "/blog", label: "Blog" },
     { href: "/contatti", label: "Contatti" }
   ]
 };
@@ -25,7 +24,7 @@ export const services = [
     image: "/images/case-legno-geodomus.jpg",
     alt: "Dettaglio premium di una casa prefabbricata in legno GeoDomus",
     description:
-      "Abitazioni efficienti, personalizzabili e progettate per comfort termico, acustico e tempi di realizzazione controllati.",
+      "Dalla valutazione iniziale alla realizzazione: abitazioni efficienti progettate insieme a impianti, comfort e tempi di cantiere.",
     keywords: ["case prefabbricate in legno Udine", "case in legno Friuli Venezia Giulia"]
   },
   {
@@ -34,7 +33,7 @@ export const services = [
     image: "/images/fotovoltaico-geodomus.jpg",
     alt: "Pannelli fotovoltaici integrati sul tetto di una casa sostenibile",
     description:
-      "Sistemi solari per abitazioni e aziende con focus su autoconsumo, accumulo e integrazione energetica.",
+      "Dall'analisi delle bollette alla posa: impianti solari per abitazioni e aziende con focus su autoconsumo, accumulo e integrazione energetica.",
     keywords: ["fotovoltaico Udine", "impianti fotovoltaici FVG"]
   },
   {
@@ -43,7 +42,7 @@ export const services = [
     image: "/images/biomassa-geodomus.jpg",
     alt: "Locale tecnico con impianto moderno di riscaldamento a biomassa",
     description:
-      "Caldaie e impianti a pellet, legna o cippato per ridurre dipendenza energetica e costi di esercizio.",
+      "Dalla verifica del fabbisogno alla realizzazione: caldaie e impianti a pellet, legna o cippato dimensionati sul caso reale.",
     keywords: ["riscaldamento a biomassa Udine", "caldaie a pellet Friuli Venezia Giulia"]
   }
 ];

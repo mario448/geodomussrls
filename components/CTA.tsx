@@ -9,9 +9,12 @@ export function CTA({ title, text }: { title: string; text: string }) {
           <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight lg:text-6xl">{title}</h2>
           <p className="mt-5 max-w-2xl text-white/65">{text}</p>
         </div>
-        <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-semibold text-graphite">
-          Richiedi una consulenza
-        </Link>
+        <div>
+          <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-semibold text-graphite">
+            Invia richiesta di verifica
+          </Link>
+          <p className="mt-2 text-sm text-white/55">Piu dati fornisci, piu utile sara la prima risposta.</p>
+        </div>
       </div>
     </section>
   );

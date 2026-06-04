@@ -16,6 +16,12 @@ export type ServicePageProps = {
   imageAlt: string;
   points: string[];
   process: string[];
+  problemTitle: string;
+  problemText: string;
+  whenMakesSense: string[];
+  whenNotSense: string[];
+  checks: string[];
+  mistakes: string[];
   faqs: { question: string; answer: string }[];
   cta: string;
 };
@@ -32,9 +38,12 @@ export function ServicePage(props: ServicePageProps) {
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">{props.eyebrow}</p>
             <h1 className="mt-5 text-6xl font-semibold tracking-tight text-graphite md:text-8xl">{props.title}</h1>
             <p className="text-xl leading-9 text-graphite/65">{props.intro}</p>
-            <Link href="/contatti" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-semibold text-white">
-              Richiedi una consulenza
-            </Link>
+            <div className="mt-8">
+              <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-graphite px-6 font-semibold text-white">
+                Richiedi una verifica tecnica preliminare
+              </Link>
+              <p className="mt-2 text-sm text-graphite/55">Partiamo da dati concreti prima di formulare ipotesi o preventivi.</p>
+            </div>
           </FadeIn>
           <FadeIn className="relative min-h-[360px] overflow-hidden rounded-lg shadow-soft lg:min-h-[560px]">
             <Image
@@ -51,14 +60,70 @@ export function ServicePage(props: ServicePageProps) {
       </section>
 
       <section className="bg-white px-5 py-20 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.85fr_1.15fr]">
           <FadeIn>
-            <h2 className="text-5xl font-semibold tracking-tight lg:text-7xl">Perche sceglierlo</h2>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Problema specifico</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">{props.problemTitle}</h2>
+            <p className="mt-6 text-lg leading-8 text-graphite/65">{props.problemText}</p>
           </FadeIn>
           <div className="grid gap-4 md:grid-cols-2">
             {props.points.map((point) => (
               <FadeIn key={point} className="rounded-lg border border-graphite/10 bg-warm p-6">
                 <p className="text-xl font-semibold">{point}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
+          <FadeIn>
+            <h2 className="text-5xl font-semibold tracking-tight lg:text-7xl">Quando ha senso</h2>
+          </FadeIn>
+          <div className="grid gap-4 md:grid-cols-2">
+            {props.whenMakesSense.map((point) => (
+              <FadeIn key={point} className="rounded-lg border border-graphite/10 bg-warm p-6">
+                <p className="text-xl font-semibold">{point}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-stone/55 px-5 py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Da verificare</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Quando puo non avere senso</h2>
+            <div className="mt-10 grid gap-3">
+              {props.whenNotSense.map((item) => (
+                <p key={item} className="rounded-lg bg-white p-5 text-xl font-semibold shadow-soft">{item}</p>
+              ))}
+            </div>
+          </FadeIn>
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Verifiche GeoDomus</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Cosa verifica GeoDomus</h2>
+            <div className="mt-10 grid gap-3">
+              {props.checks.map((item) => (
+                <p key={item} className="rounded-lg bg-white p-5 text-xl font-semibold shadow-soft">{item}</p>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Errori da evitare</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Decisioni che costano quando arrivano troppo presto.</h2>
+          </FadeIn>
+          <div className="grid gap-4 md:grid-cols-2">
+            {props.mistakes.map((item) => (
+              <FadeIn key={item} className="rounded-lg border border-graphite/10 bg-white p-6 shadow-soft">
+                <p className="text-xl font-semibold">{item}</p>
               </FadeIn>
             ))}
           </div>

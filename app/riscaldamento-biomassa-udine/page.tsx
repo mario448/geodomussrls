@@ -16,14 +16,20 @@ export default function BiomassPage() {
       path="/riscaldamento-biomassa-udine"
       title="Riscaldamento a biomassa"
       eyebrow="Pellet / Legna / Cippato"
-      intro="La biomassa e una scelta concreta quando l'impianto viene dimensionato sul fabbisogno reale e integrato con l'involucro, lo stoccaggio e le abitudini di utilizzo."
+      intro="La biomassa ha senso solo se spazio, fabbisogno e gestione sono coerenti."
       description="Riscaldamento a biomassa a Udine e in Friuli Venezia Giulia."
       image="/images/biomassa-geodomus.jpg"
       imageAlt="Locale tecnico moderno con sistema di riscaldamento a biomassa e deposito pellet"
       points={["Pellet, legna e cippato", "Riduzione dei costi di esercizio", "Soluzione per abitazioni e aziende agricole", "Adatto a strutture ricettive", "Integrazione con fotovoltaico", "Valutazione locale e tecnica"]}
+      problemTitle="Una caldaia o stufa a biomassa richiede compatibilita tecnica."
+      problemText="Una caldaia o stufa a biomassa puo ridurre la dipendenza da altre fonti, ma va valutata con attenzione: servono spazio tecnico, combustibile adeguato, manutenzione, canna fumaria e compatibilita con l'edificio."
+      whenMakesSense={["Hai fabbisogno termico coerente e misurabile", "Hai spazio tecnico e deposito combustibile", "Puoi gestire manutenzione e rifornimento", "Vuoi integrare biomassa con fotovoltaico o altri sistemi"]}
+      whenNotSense={["Spazi tecnici insufficienti", "Scarsa disponibilita o gestione combustibile", "Necessita di automazione totale", "Edificio con fabbisogno molto basso", "Vincoli tecnici o logistici"]}
+      checks={["Fabbisogno termico", "Superficie riscaldata", "Tipo edificio", "Spazio per generatore e accumulo", "Spazio per pellet o legna", "Canna fumaria", "Manutenzione", "Abitudini d'uso", "Possibile integrazione con fotovoltaico o altri impianti"]}
+      mistakes={["Scegliere la potenza senza calcolo del fabbisogno", "Ignorare deposito, accessi e rifornimento", "Non verificare canna fumaria e locale tecnico", "Sottovalutare manutenzione e gestione combustibile", "Valutare la biomassa senza guardare involucro e consumi"]}
       process={["Analisi fabbisogno termico", "Scelta combustibile e generatore", "Verifica locale tecnico e deposito", "Installazione impianto", "Assistenza e manutenzione"]}
       faqs={faqs.biomass}
-      cta="Vuoi un sistema a biomassa progettato correttamente?"
+      cta="Valuta se la biomassa ha senso nel tuo edificio"
     />
   );
 }

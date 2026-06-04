@@ -25,6 +25,12 @@ export function Footer() {
                 {service.title}
               </Link>
             ))}
+            <Link href="/soluzioni-integrate" className="hover:text-white">
+              Soluzioni integrate
+            </Link>
+            <Link href="/blog" className="hover:text-white">
+              Blog
+            </Link>
           </div>
         </div>
         <div className="mt-6 flex flex-wrap justify-between gap-3 text-xs text-white/40">
