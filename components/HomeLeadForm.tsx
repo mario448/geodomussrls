@@ -76,7 +76,7 @@ export function HomeLeadForm() {
     const body = [
       "Buongiorno GeoDomus,",
       "",
-      "ho completato la diagnostica veloce sul sito.",
+      "ho completato la diagnostica veloce sul sito e vorrei richiedere una verifica di fattibilità.",
       "",
       `Priorità: ${priority}`,
       `Bolletta elettrica mensile: ${monthlyBill} euro`,
@@ -88,7 +88,7 @@ export function HomeLeadForm() {
       `Risparmio stimato dal sito: ${formatNumber(estimate.low)}-${formatNumber(estimate.high)} euro/anno`,
       `Investimento indicativo: ${formatNumber(estimate.investmentLow)}-${formatNumber(estimate.investmentHigh)} euro`,
       "",
-      "Vorrei capire se questi numeri sono realistici sul mio caso."
+      "Vorrei capire se questi numeri sono realistici e qual è il prossimo passo tecnico corretto."
     ].join("\n");
 
     window.location.href = `mailto:${site.email}?subject=${encodeURIComponent("Diagnostica veloce GeoDomus")}&body=${encodeURIComponent(body)}`;
@@ -178,7 +178,7 @@ export function HomeLeadForm() {
             </span>
           </label>
           <button type="submit" className="min-h-12 rounded-md bg-forest px-6 py-4 text-base font-bold text-white shadow-soft">
-            Ricevi il risultato e verifica il caso
+            Ricevi il risultato e verifica fattibilità
           </button>
           {submitted ? <p className="text-sm font-semibold leading-6 text-forest">Diagnostica preparata. Se il client email si apre, trovi già tutti i dati compilati.</p> : null}
           <button type="button" onClick={() => setStep("quiz")} className="text-left text-sm font-semibold text-graphite/55 underline underline-offset-4">

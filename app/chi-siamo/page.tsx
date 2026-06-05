@@ -23,7 +23,7 @@ const values = [
   },
   {
     title: "Posa della struttura in legno",
-    text: "La qualità finale dipende dalla posa: tenuta all'aria, isolamento, dettagli di nodo, protezione dall'umidita e controllo di cantiere."
+    text: "La qualità finale dipende dalla posa: tenuta all'aria, isolamento, dettagli di nodo, protezione dall'umidità e controllo di cantiere."
   },
   {
     title: "Installazione impianti e collaudo",
@@ -31,7 +31,7 @@ const values = [
   },
   {
     title: "Conoscenza del FVG",
-    text: "Operiamo tra Udine, Gorizia e Friuli-Venezia Giulia, con attenzione a sismicita, clima, vincoli paesaggistici e incentivi locali."
+    text: "Operiamo tra Udine, Gorizia e Friuli-Venezia Giulia, con attenzione a sismicità, clima, vincoli paesaggistici e incentivi locali."
   }
 ];
 
@@ -62,10 +62,10 @@ export default function AboutPage() {
           <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">GeoDomus srls</p>
           <h1 className="mt-5 max-w-5xl text-6xl font-semibold tracking-tight md:text-8xl">GeoDomus: progettazione e costruzione sostenibile in Friuli-Venezia Giulia.</h1>
           <p className="mt-7 max-w-4xl text-xl leading-9 text-graphite/65">
-            Il mercato della bioedilizia e spesso diviso tra chi vende una struttura in legno a catalogo e chi installa impianti senza conoscere davvero la fisica dell'edificio. Il risultato sono case formalmente efficienti, ma con impianti dimensionati tardi, ponti termici non governati, locali tecnici sottovalutati e preventivi difficili da confrontare.
+            Il mercato della bioedilizia è spesso diviso tra chi vende una struttura in legno a catalogo e chi installa impianti senza conoscere davvero la fisica dell'edificio. Il risultato sono case formalmente efficienti, ma con impianti dimensionati tardi, ponti termici non governati, locali tecnici sottovalutati e preventivi difficili da confrontare.
           </p>
           <p className="mt-5 max-w-4xl text-xl leading-9 text-graphite/65">
-            GeoDomus nasce per unire studio tecnico, progettazione architettonica, calcolo termotecnico, gestione burocratica e maestranza edile. L'obiettivo e offrire edifici in legno nativamente efficienti, integrati con impianti fotovoltaici e sistemi a biomasse, progettati per il clima e la sismicita del Friuli-Venezia Giulia.
+            GeoDomus nasce per unire studio tecnico, progettazione architettonica, calcolo termotecnico, gestione burocratica e maestranza edile. L'obiettivo è offrire edifici in legno nativamente efficienti, integrati con impianti fotovoltaici e sistemi a biomasse, progettati per il clima e la sismicità del Friuli-Venezia Giulia.
           </p>
           <p className="mt-5 max-w-4xl text-xl leading-9 text-graphite/65">
             Non presentiamo recensioni o cantieri storici non ancora appartenenti al brand. Costruiamo autorevolezza con metodo: analisi del sito, verifiche urbanistiche, stratigrafie leggibili, capitolati, cronoprogramma, collaudi e documentazione tecnica. L'esperienza dei singoli professionisti viene messa dentro un unico team operativo.
@@ -80,7 +80,7 @@ export default function AboutPage() {
           </FadeIn>
           <FadeIn className="rounded-lg border border-graphite/10 bg-white p-7 shadow-soft">
             <p className="text-lg leading-8 text-graphite/65">
-              GeoDomus e in fase di costituzione, ma nasce dal background di professionisti che hanno lavorato su progettazione strutturale, gestione cantieri, pratiche autorizzative locali, valutazioni energetiche e coordinamento tecnico. I dettagli nominativi, le abilitazioni e le certificazioni verranno pubblicati appena formalizzati e verificabili. Fino ad allora preferiamo dichiarare solo ciò che possiamo sostenere: processo, competenza tecnica e responsabilità scritte.
+              GeoDomus è in fase di costituzione, ma nasce dal background di professionisti che hanno lavorato su progettazione strutturale, gestione cantieri, pratiche autorizzative locali, valutazioni energetiche e coordinamento tecnico. I dettagli nominativi, le abilitazioni e le certificazioni verranno pubblicati appena formalizzati e verificabili. Fino ad allora preferiamo dichiarare solo ciò che possiamo sostenere: processo, competenza tecnica e responsabilità scritte.
             </p>
           </FadeIn>
         </div>

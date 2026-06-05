@@ -57,7 +57,7 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Contatti</p>
-            <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Avvia il tuo progetto in bioedilizia a Udine e Gorizia</h1>
+            <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Richiedi la verifica di fattibilità per casa ed energia in FVG</h1>
             <p className="mt-6 text-xl leading-9 text-graphite/65">
               Per stimare case prefabbricate in legno, impianti fotovoltaici e biomasse non usiamo listini standard. Serve una prima analisi tecnica del terreno o dell'immobile esistente: vincoli, consumi, orientamento, locale tecnico, budget e obiettivo energetico.
             </p>
@@ -93,8 +93,8 @@ export default function ContactPage() {
 
               <div className="rounded-lg border border-graphite/10 p-5">
                 <p className="text-xs font-bold uppercase tracking-[.16em] text-timber">Opzione B</p>
-                <h2 className="mt-2 text-3xl font-semibold tracking-tight">Valutazione preliminare completa</h2>
-                <p className="mt-3 text-sm leading-6 text-graphite/60">Compila più dati solo se vuoi una prima analisi più utile.</p>
+                <h2 className="mt-2 text-3xl font-semibold tracking-tight">Verifica di fattibilità completa</h2>
+                <p className="mt-3 text-sm leading-6 text-graphite/60">Compila più dati se vuoi capire vincoli, priorità e prossimo passo tecnico.</p>
                 <div className="mt-5 grid gap-4">
                   <label className="grid gap-2 text-sm text-graphite/60">Possiedi già il terreno edificabile?<select name="landAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Si</option><option>No</option><option>Sto valutando l'acquisto</option><option>Non riguarda il mio caso</option></select></label>
                   <label className="grid gap-2 text-sm text-graphite/60">Interesse specifico<select name="specificInterest" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Case in legno</option><option>Fotovoltaico</option><option>Biomasse</option><option>Casa + impianti integrati</option><option>Non so, voglio una diagnosi</option></select></label>
@@ -119,11 +119,11 @@ export default function ContactPage() {
               <label className="flex gap-3 text-sm leading-6 text-graphite/60">
                 <input type="checkbox" name="marketingConsent" className="mt-1" />
                 <span>
-                  Acconsento a ricevere comunicazioni informative o promozionali da GeoDomus. Il consenso e facoltativo e revocabile in qualsiasi momento.
+                  Acconsento a ricevere comunicazioni informative o promozionali da GeoDomus. Il consenso è facoltativo e revocabile in qualsiasi momento.
                 </span>
               </label>
-              <p className="text-sm leading-6 text-graphite/55">Più dati fornisci, più utile sara la prima risposta. Non proponiamo pacchetti standard senza capire terreno, edificio, consumi e obiettivi.</p>
-              <button type="submit" className="min-h-12 rounded-md bg-graphite px-6 font-semibold text-white">Richiedi sopralluogo tecnico o studio di fattibilità</button>
+              <p className="text-sm leading-6 text-graphite/55">Più dati fornisci, più utile sarà la prima risposta. Non proponiamo pacchetti standard senza capire terreno, edificio, consumi e obiettivi.</p>
+              <button type="submit" className="min-h-12 rounded-md bg-graphite px-6 font-semibold text-white">Richiedi verifica di fattibilità</button>
               <p className="text-sm leading-6 text-graphite/55">Richiesta ricevuta. Analizzeremo i dati inviati e ti ricontatteremo per indicarti il prossimo passo utile: raccolta documenti, sopralluogo, confronto tecnico o preventivo preliminare.</p>
             </form>
           </FadeIn>

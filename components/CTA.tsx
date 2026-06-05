@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function CTA({ title, text }: { title: string; text: string }) {
+export function CTA({ title, text, buttonText = "Verifica se il progetto è fattibile" }: { title: string; text: string; buttonText?: string }) {
   return (
     <section className="px-5 py-20 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-8 rounded-lg bg-graphite p-8 text-white shadow-soft lg:grid-cols-[1fr_auto] lg:items-end lg:p-12">
@@ -11,7 +11,7 @@ export function CTA({ title, text }: { title: string; text: string }) {
         </div>
         <div>
           <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-semibold text-graphite">
-            Calcola il potenziale di risparmio
+            {buttonText}
           </Link>
           <p className="mt-2 text-sm text-white/55">Prima risposta entro 48 ore lavorative.</p>
         </div>

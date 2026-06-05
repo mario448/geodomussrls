@@ -21,8 +21,8 @@ export default function BiomassPage() {
       image="/images/biomassa-geodomus.jpg"
       imageAlt="Locale tecnico moderno con sistema di riscaldamento a biomassa e deposito pellet in provincia di Udine"
       points={["Pellet, legna e cippato", "Riduzione dei costi di esercizio", "Soluzione per abitazioni e aziende agricole", "Adatto a strutture ricettive", "Integrazione con fotovoltaico", "Valutazione locale e tecnica"]}
-      problemTitle="Una caldaia o stufa a biomassa richiede compatibilita tecnica."
-      problemText="Una caldaia o stufa a biomassa può ridurre la dipendenza da altre fonti, ma va valutata con attenzione: servono spazio tecnico, combustibile adeguato, manutenzione, canna fumaria e compatibilita con l'edificio."
+      problemTitle="Una caldaia o stufa a biomassa richiede compatibilità tecnica."
+      problemText="Una caldaia o stufa a biomassa può ridurre la dipendenza da altre fonti, ma va valutata con attenzione: servono spazio tecnico, combustibile adeguato, manutenzione, canna fumaria e compatibilità con l'edificio."
       whenMakesSense={["Hai fabbisogno termico coerente e misurabile", "Hai spazio tecnico e deposito combustibile", "Puoi gestire manutenzione e rifornimento", "Vuoi integrare biomassa con fotovoltaico o altri sistemi"]}
       whenNotSense={["Spazi tecnici insufficienti", "Scarsa disponibilità o gestione combustibile", "Necessità di automazione totale", "Edificio con fabbisogno molto basso", "Vincoli tecnici o logistici"]}
       checks={["Fabbisogno termico", "Superficie riscaldata", "Tipo edificio", "Spazio per generatore e accumulo", "Spazio per pellet o legna", "Canna fumaria", "Manutenzione", "Abitudini d'uso", "Possibile integrazione con fotovoltaico o altri impianti"]}

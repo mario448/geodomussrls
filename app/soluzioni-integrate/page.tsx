@@ -58,7 +58,7 @@ export default function IntegratedPage() {
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <FadeIn className="max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Per chi e utile</p>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Per chi è utile</p>
             <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Quando serve una regia unica prima dei preventivi.</h2>
           </FadeIn>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

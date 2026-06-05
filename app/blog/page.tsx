@@ -30,7 +30,7 @@ const editorialPlan = [
   ["Casa in legno e fotovoltaico: predisposizioni da fare prima del cantiere", "Passaggi cavi, quadro elettrico, orientamento tetto, accumulo e monitoraggio."],
   ["Preventivi fotovoltaico: perché confrontare solo i kWp è un errore", "Componenti, ombre, esposizione, profilo consumi, garanzie e costo reale dell'impianto."],
   ["Biomassa per aziende agricole: quando ha senso e quando no", "Disponibilità combustibile, spazi, fabbisogni, accessi, manutenzione e continuità d'uso."],
-  ["Come capire se una casa esistente può diventare davvero efficiente", "Bollette, involucro, impianti, tetto, serramenti, umidita e interventi prioritari."],
+  ["Come capire se una casa esistente può diventare davvero efficiente", "Bollette, involucro, impianti, tetto, serramenti, umidità e interventi prioritari."],
   ["Fotovoltaico, biomassa e casa in legno: come evitare soluzioni scollegate", "Metodo per far dialogare edificio, energia elettrica, calore e budget."]
 ];
 

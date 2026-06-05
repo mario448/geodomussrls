@@ -7,7 +7,7 @@ export const site = {
   address: "Via delle Energie 18, 33100 Udine UD",
   area: "Udine, provincia di Udine e Friuli Venezia Giulia",
   description:
-    "GeoDomus srls e studio tecnico e impresa edile specializzata in bioedilizia, case prefabbricate in legno, fotovoltaico e impianti a biomasse in Friuli Venezia Giulia.",
+    "GeoDomus srls è studio tecnico e impresa edile specializzata in bioedilizia, case prefabbricate in legno, fotovoltaico e impianti a biomasse in Friuli Venezia Giulia.",
   nav: [
     { href: "/", label: "Home" },
     { href: "/case-prefabbricate-legno-udine", label: "Costruire casa" },
@@ -23,7 +23,7 @@ export const services = [
     title: "Case prefabbricate in legno",
     href: "/case-prefabbricate-legno-udine",
     image: "/images/case-legno-geodomus.jpg",
-    alt: "Dettaglio premium di una casa prefabbricata in legno GeoDomus",
+    alt: "Casa prefabbricata in legno ad alta efficienza progettata per Udine e Friuli Venezia Giulia",
     description:
       "Dalla valutazione iniziale alla realizzazione: abitazioni efficienti progettate insieme a impianti, comfort e tempi di cantiere.",
     keywords: ["case prefabbricate in legno Udine", "case in legno Friuli Venezia Giulia"]
@@ -32,7 +32,7 @@ export const services = [
     title: "Impianti fotovoltaici",
     href: "/fotovoltaico-udine-fvg",
     image: "/images/fotovoltaico-geodomus.jpg",
-    alt: "Pannelli fotovoltaici integrati sul tetto di una casa sostenibile",
+    alt: "Impianto fotovoltaico su tetto residenziale a Udine con accumulo e autoconsumo",
     description:
       "Dall'analisi delle bollette alla posa: impianti solari per abitazioni e aziende con focus su autoconsumo, accumulo e integrazione energetica.",
     keywords: ["fotovoltaico Udine", "impianti fotovoltaici FVG"]
@@ -41,7 +41,7 @@ export const services = [
     title: "Riscaldamento a biomassa",
     href: "/riscaldamento-biomassa-udine",
     image: "/images/biomassa-geodomus.jpg",
-    alt: "Locale tecnico con impianto moderno di riscaldamento a biomassa",
+    alt: "Locale tecnico per riscaldamento a biomassa pellet o cippato in Friuli Venezia Giulia",
     description:
       "Dalla verifica del fabbisogno alla realizzazione: caldaie e impianti a pellet, legna o cippato dimensionati sul caso reale.",
     keywords: ["riscaldamento a biomassa Udine", "caldaie a pellet Friuli Venezia Giulia"]
@@ -131,7 +131,7 @@ export const faqs = {
     {
       question: "Serve uno spazio tecnico dedicato?",
       answer:
-        "In molti casi si. La progettazione deve considerare locale tecnico, deposito combustibile, canna fumaria, accessibilità e manutenzione."
+        "In molti casi sì. La progettazione deve considerare locale tecnico, deposito combustibile, canna fumaria, accessibilità e manutenzione."
     }
   ]
 };

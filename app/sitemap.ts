@@ -7,6 +7,7 @@ const routes = [
   "/case-prefabbricate-legno-udine",
   "/fotovoltaico-udine-fvg",
   "/riscaldamento-biomassa-udine",
+  "/energia-aziende-agricole-agriturismi-fvg",
   "/soluzioni-integrate",
   "/chi-siamo",
   "/contatti",

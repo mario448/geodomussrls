@@ -110,7 +110,7 @@ export function CookieConsent() {
                     <input type="checkbox" checked={analytics} onChange={(event) => setAnalytics(event.target.checked)} className="mt-1" />
                     <span>
                       <strong className="block text-graphite">Cookie statistici</strong>
-                      Non installati al momento. Questa preferenza e pronta per eventuali strumenti analytics futuri.
+                      Non installati al momento. Questa preferenza è pronta per eventuali strumenti analytics futuri.
                     </span>
                   </label>
                   <label className="flex gap-3 text-sm leading-6 text-graphite/72">

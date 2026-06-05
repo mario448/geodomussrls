@@ -28,6 +28,9 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <Link href="/contatti" className="inline-flex min-h-10 items-center justify-center rounded-md bg-graphite px-4 font-bold text-white shadow-sm transition hover:bg-forest">
+            Verifica fattibilità
+          </Link>
         </nav>
       </div>
       {open ? (
@@ -37,6 +40,9 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <Link href="/contatti" className="mt-2 inline-flex min-h-11 items-center justify-center rounded-md bg-graphite px-4 font-bold text-white" onClick={() => setOpen(false)}>
+            Verifica fattibilità del progetto
+          </Link>
         </nav>
       ) : null}
     </header>

@@ -56,7 +56,7 @@ export default function PrivacyPolicyPage() {
                 </a>
               </p>
               <p className="mt-4 text-sm leading-6 text-graphite/55">
-                Il responsabile della protezione dei dati non è indicato perché, sulla base delle informazioni disponibili, non risulta nominato. Se verra nominato, questa pagina dovra essere aggiornata con i relativi contatti.
+                Il responsabile della protezione dei dati non è indicato perché, sulla base delle informazioni disponibili, non risulta nominato. Se verra nominato, questa pagina dovrà essere aggiornata con i relativi contatti.
               </p>
             </div>
           </FadeIn>
@@ -114,7 +114,7 @@ export default function PrivacyPolicyPage() {
           <FadeIn>
             <h2 className="text-4xl font-semibold tracking-tight">Trasferimenti fuori dallo SEE</h2>
             <p className="mt-6 leading-8 text-graphite/65">
-              Il sito non installa al momento strumenti di marketing o analytics di terze parti. Se in futuro saranno utilizzati servizi che comportano trasferimenti di dati fuori dallo Spazio Economico Europeo, GeoDomus dovra verificarne le garanzie applicabili, aggiornare questa informativa e, dove richiesto, acquisire il consenso.
+              Il sito non installa al momento strumenti di marketing o analytics di terze parti. Se in futuro saranno utilizzati servizi che comportano trasferimenti di dati fuori dallo Spazio Economico Europeo, GeoDomus dovrà verificarne le garanzie applicabili, aggiornare questa informativa e, dove richiesto, acquisire il consenso.
             </p>
           </FadeIn>
         </div>
