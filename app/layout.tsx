@@ -9,7 +9,7 @@ import { localBusinessJsonLd, site } from "@/data/site";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "GeoDomus srls | Case in legno, fotovoltaico e biomassa a Udine",
+    default: "GeoDomus srls | Riqualificazioni energetiche complete in FVG",
     template: "%s | GeoDomus srls"
   },
   description: site.description,

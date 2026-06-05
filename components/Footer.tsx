@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { services, site } from "@/data/site";
+import { site } from "@/data/site";
 
 export function Footer() {
   return (
@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <p className="text-4xl font-semibold tracking-tight lg:text-7xl">GeoDomus srls</p>
             <p className="mt-5 max-w-xl text-white/60">
-              Case in legno, fotovoltaico e biomassa progettati come un unico sistema abitativo ed energetico per il Friuli Venezia Giulia.
+              GeoDomus srls in costituzione. Studio tecnico e impresa specializzata in bioedilizia, case in legno, fotovoltaico e biomasse in Friuli-Venezia Giulia.
             </p>
           </div>
           <div className="grid gap-3 text-sm text-white/65">
@@ -20,16 +20,17 @@ export function Footer() {
           </div>
           <div className="grid gap-3 text-sm text-white/65">
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-timber">Soluzioni</p>
-            {services.map((service) => (
-              <Link key={service.href} href={service.href} className="hover:text-white">
-                {service.title}
-              </Link>
-            ))}
+            <Link href="/case-prefabbricate-legno-udine" className="hover:text-white">
+              Costruire casa
+            </Link>
             <Link href="/soluzioni-integrate" className="hover:text-white">
-              Soluzioni integrate
+              Riqualificare
+            </Link>
+            <Link href="/fotovoltaico-udine-fvg" className="hover:text-white">
+              Ridurre bollette
             </Link>
             <Link href="/blog" className="hover:text-white">
-              Blog
+              Guide
             </Link>
           </div>
           <div className="grid gap-3 text-sm text-white/65">
@@ -43,8 +44,8 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-6 flex flex-wrap justify-between gap-3 text-xs text-white/40">
-          <span>© 2026 GeoDomus srls</span>
-          <span>Udine, provincia di Udine e Friuli Venezia Giulia</span>
+          <span>© 2026 GeoDomus srls in costituzione</span>
+          <span>Area operativa prioritaria: Udine, Gorizia, province e FVG · P.IVA/REA/sede legale [DA COMPLETARE] · Informazioni soggette ad aggiornamento societario</span>
         </div>
       </div>
     </footer>

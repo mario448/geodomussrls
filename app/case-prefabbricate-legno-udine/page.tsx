@@ -3,33 +3,40 @@ import { faqs } from "@/data/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Case prefabbricate in legno a Udine e FVG",
+  title: "Case prefabbricate in legno Udine e Gorizia",
   description:
-    "Case prefabbricate in legno a Udine e in Friuli Venezia Giulia: efficienza energetica, comfort, sostenibilita e tempi di realizzazione controllati.",
+    "Case prefabbricate in legno a Udine e Gorizia: bioedilizia, comfort, sismo-resistenza, fotovoltaico, biomasse e autorizzazioni FVG.",
   path: "/case-prefabbricate-legno-udine",
-  keywords: ["case prefabbricate in legno Udine", "case in legno FVG", "case prefabbricate Friuli Venezia Giulia", "costruire casa in legno Udine"]
+  keywords: ["Case prefabbricate in legno Udine", "Bioedilizia Gorizia", "Case in legno chiavi in mano Friuli", "Progettazione case passive", "Costruzioni edili Gorizia"]
 });
 
 export default function WoodHomesPage() {
   return (
     <ServicePage
       path="/case-prefabbricate-legno-udine"
-      title="Case prefabbricate in legno"
-      eyebrow="Udine / Friuli Venezia Giulia"
-      intro="Una casa in legno non e solo una struttura. E un sistema edificio-impianti."
-      description="Case prefabbricate in legno a Udine e in Friuli Venezia Giulia."
+      title="Case prefabbricate in legno a Udine e Gorizia: comfort e autonomia energetica"
+      eyebrow="Bioedilizia / Udine / Gorizia / FVG"
+      intro="Edilizia in legno oggi significa struttura sismo-resistente, involucro ad alte prestazioni, tempi di cantiere controllati e impianti progettati prima della posa."
+      description="Case prefabbricate in legno a Udine e Gorizia con progettazione, posa, fotovoltaico, biomasse e autorizzazioni FVG."
       image="/images/case-legno-geodomus.jpg"
       imageAlt="Dettaglio architettonico di una casa prefabbricata in legno in Friuli Venezia Giulia"
-      points={["Bollette fino al 70% piu basse rispetto a una costruzione tradizionale non isolata", "Temperatura stabile estate e inverno, senza correnti e senza umidita - garantita dalla stratigrafia dell'involucro", "Autoconsumo energetico elevato: produci la maggior parte dell'energia che consumi direttamente in casa", "Legno certificato, materiali a bassa emissione e filiera verificata - una scelta che vale anche per il valore di rivendita", "Un solo interlocutore per casa, impianti e riscaldamento: nessuna incompatibilita tra sistemi, nessuna responsabilita divisa", "Siamo a Udine: sopralluogo reale prima di ogni proposta, assistenza post-intervento senza attese da call center"]}
-      problemTitle="Le prestazioni reali dipendono da involucro, impianti e cantiere."
-      problemText="Le prestazioni reali dipendono da involucro, stratigrafie, tenuta all'aria, comfort estivo, impianti e qualita del cantiere. Per questo GeoDomus non valuta la casa separatamente da fotovoltaico, generazione termica e fabbisogno energetico."
-      whenMakesSense={["Vuoi costruire partendo da terreno, vincoli e obiettivi energetici", "Vuoi chiarire capitolato, tempi e prestazioni prima di confrontare offerte", "Vuoi coordinare involucro, fotovoltaico e sistema termico fin dal progetto", "Vuoi ridurre il rischio di varianti costose in fase avanzata"]}
-      whenNotSense={["Il terreno o i vincoli non sono ancora verificati", "Il budget non tiene conto di fondazioni, finiture e impianti", "Si confrontano solo prezzi al mq senza capitolati equivalenti", "Il progetto architettonico e gia chiuso senza valutazione impiantistica"]}
-      checks={["Terreno e vincoli", "Orientamento", "Superficie e layout", "Prestazioni energetiche desiderate", "Comfort estivo", "Impianti previsti", "Budget", "Tempi", "Priorita del cliente"]}
-      mistakes={["Scegliere solo in base al prezzo al mq", "Non valutare comfort estivo e acustica", "Separare progetto architettonico e impianti", "Non chiarire cosa e incluso nel capitolato", "Confrontare preventivi non equivalenti"]}
-      process={["Analisi del terreno, esigenze e budget", "Sopralluogo e verifica vincoli", "Progettazione tecnica e prestazionale", "Definizione materiali e impianti integrati", "Realizzazione e assistenza post-intervento"]}
+      points={[
+        "Resistenza sismica: struttura leggera e progettata per le condizioni del Friuli-Venezia Giulia",
+        "Isolamento invernale ed estivo: trasmittanza e sfasamento vengono definiti in stratigrafia, non dopo",
+        "Tempi di cantiere più controllabili rispetto a molte costruzioni tradizionali, grazie a componenti prefabbricati",
+        "Fotovoltaico e accumulo progettati su orientamento, tetto, consumi e passaggi impiantistici reali",
+        "Riscaldamento a biomasse valutato su fabbisogno, locale tecnico, deposito, canna fumaria e gestione combustibile",
+        "Studio tecnico interno per permessi comunali, vincoli paesaggistici, pratiche e incentivi FVG da verificare"
+      ]}
+      problemTitle="Una casa in legno non deve essere scelta a catalogo."
+      problemText="Una casa prefabbricata in legno funziona quando struttura, involucro e impianti nascono insieme. Se fotovoltaico, biomasse, accumulo e locali tecnici vengono decisi dopo la progettazione architettonica, il rischio e adattare soluzioni costose a un edificio che non le aveva previste."
+      whenMakesSense={["Hai un terreno o stai valutando un terreno tra Udine, Gorizia e FVG", "Vuoi una casa in legno chiavi in mano con impianti progettati insieme", "Vuoi valutare comfort estivo, sismo-resistenza e autonomia energetica prima del capitolato", "Vuoi capire permessi, vincoli, incentivi e costi prima di firmare con fornitori separati"]}
+      whenNotSense={["Il terreno non è ancora verificato dal punto di vista urbanistico o geologico", "Il progetto architettonico e già chiuso senza predisposizioni impiantistiche", "Si confrontano offerte solo sul prezzo al metro quadro senza capitolato tecnico", "Il budget non considera fondazioni, impianti, finiture, pratiche e sistemazioni esterne"]}
+      checks={["Studio climatico e geologico", "Fattibilità urbanistica", "Orientamento e ombre", "Classificazione sismica", "Trasmittanza e sfasamento", "kWp fotovoltaici installabili", "Locale tecnico biomasse", "Permessi comunali", "Incentivi e contributi FVG"]}
+      mistakes={["Comprare una struttura in legno senza progetto energetico", "Aggiungere il fotovoltaico dopo la definizione del tetto", "Scegliere biomassa senza deposito e canna fumaria adeguati", "Ignorare comfort estivo e acustica", "Non verificare vincoli paesaggistici e autorizzazioni locali"]}
+      process={["Analisi climatica, geologica e studio di fattibilità urbanistica", "Progettazione strutturale e calcolo termotecnico integrato", "Posa della struttura in legno con isolamento termico avanzato", "Installazione fotovoltaico, biomasse e sistemi di accumulo", "Certificazione energetica finale e assistenza post-consegna"]}
       faqs={faqs.wood}
-      cta="Verifica se il tuo progetto e pronto per una casa in legno"
+      cta="Richiedi un incontro tecnico per lo studio del progetto"
     />
   );
 }

@@ -19,7 +19,7 @@ const rights = [
   "limitazione del trattamento",
   "opposizione al trattamento",
   "portabilita dei dati, quando applicabile",
-  "revoca del consenso, senza pregiudicare la liceita del trattamento precedente",
+  "revoca del consenso, senza pregiudicare la liceità del trattamento precedente",
   "reclamo al Garante per la protezione dei dati personali"
 ];
 
@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Informativa privacy</p>
             <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Privacy policy</h1>
             <p className="mt-6 text-lg leading-8 text-graphite/65">
-              Questa informativa descrive come {site.name} tratta i dati personali raccolti tramite il sito, il modulo contatti, le comunicazioni dirette e le attivita precontrattuali o contrattuali.
+              Questa informativa descrive come {site.name} tratta i dati personali raccolti tramite il sito, il modulo contatti, le comunicazioni dirette e le attività precontrattuali o contrattuali.
             </p>
             <p className="mt-4 text-sm font-semibold text-graphite/55">Ultimo aggiornamento: 4 giugno 2026.</p>
           </FadeIn>
@@ -56,14 +56,14 @@ export default function PrivacyPolicyPage() {
                 </a>
               </p>
               <p className="mt-4 text-sm leading-6 text-graphite/55">
-                Il responsabile della protezione dei dati non e indicato perche, sulla base delle informazioni disponibili, non risulta nominato. Se verra nominato, questa pagina dovra essere aggiornata con i relativi contatti.
+                Il responsabile della protezione dei dati non è indicato perché, sulla base delle informazioni disponibili, non risulta nominato. Se verra nominato, questa pagina dovra essere aggiornata con i relativi contatti.
               </p>
             </div>
           </FadeIn>
           <FadeIn>
             <h2 className="text-4xl font-semibold tracking-tight">Principi applicati</h2>
             <p className="mt-6 leading-8 text-graphite/65">
-              I dati sono trattati secondo liceita, correttezza, trasparenza, minimizzazione, esattezza, limitazione della conservazione, integrita e riservatezza. GeoDomus raccoglie solo i dati necessari rispetto alle finalita dichiarate e non usa il sito per decisioni automatizzate o profilazione senza consenso.
+              I dati sono trattati secondo liceità, correttezza, trasparenza, minimizzazione, esattezza, limitazione della conservazione, integrità e riservatezza. GeoDomus raccoglie solo i dati necessari rispetto alle finalità dichiarate e non usa il sito per decisioni automatizzate o profilazione senza consenso.
             </p>
           </FadeIn>
         </div>
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
         <div className="mx-auto max-w-7xl">
           <FadeIn className="max-w-4xl">
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Trattamenti</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Quali dati trattiamo e perche</h2>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Quali dati trattiamo e perché</h2>
           </FadeIn>
           <div className="mt-12 grid gap-4">
             {privacyTreatments.map((item) => (
@@ -85,7 +85,7 @@ export default function PrivacyPolicyPage() {
                     {item.data}
                   </p>
                   <p className="leading-7 text-graphite/65">
-                    <strong className="block text-graphite">Finalita</strong>
+                    <strong className="block text-graphite">Finalità</strong>
                     {item.purpose}
                   </p>
                   <p className="leading-7 text-graphite/65">
@@ -108,7 +108,7 @@ export default function PrivacyPolicyPage() {
           <FadeIn>
             <h2 className="text-4xl font-semibold tracking-tight">Destinatari e responsabili</h2>
             <p className="mt-6 leading-8 text-graphite/65">
-              I dati possono essere comunicati a fornitori tecnici, hosting provider, consulenti, professionisti, imprese, installatori, partner operativi, soggetti che gestiscono pratiche amministrative o tecniche, autorita e soggetti pubblici nei casi previsti dalla legge. Quando necessario, tali soggetti operano come responsabili del trattamento o autonomi titolari.
+              I dati possono essere comunicati a fornitori tecnici, hosting provider, consulenti, professionisti, imprese, installatori, partner operativi, soggetti che gestiscono pratiche amministrative o tecniche, autorità e soggetti pubblici nei casi previsti dalla legge. Quando necessario, tali soggetti operano come responsabili del trattamento o autonomi titolari.
             </p>
           </FadeIn>
           <FadeIn>

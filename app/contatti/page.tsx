@@ -1,32 +1,33 @@
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FadeIn } from "@/components/Motion";
-import Link from "next/link";
 import { site } from "@/data/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Raccontaci il progetto",
+  title: "Preventivo case in legno Udine | Contatti GeoDomus",
   description:
-    "Invia a GeoDomus srls i dati minimi su edificio, consumi e obiettivi per valutare case in legno, fotovoltaico, biomassa e soluzioni integrate in FVG.",
+    "Avvia il progetto in bioedilizia a Udine e Gorizia. Contatta GeoDomus per case in legno, fotovoltaico, biomasse e fattibilità tecnica.",
   path: "/contatti",
-  keywords: ["GeoDomus srls contatti", "verifica tecnica preliminare", "case in legno Udine", "fotovoltaico Udine", "biomassa Udine"]
+  keywords: ["Preventivo case in legno Udine", "Contatti GeoDomus Gorizia", "bioedilizia Gorizia", "impianti fotovoltaici FVG", "caldaie a biomasse Udine"]
 });
 
 const nextSteps = [
-  "Ti ricontattiamo per chiarire obiettivo e contesto",
-  "Raccogliamo bollette, foto, planimetrie o dati disponibili",
-  "Valutiamo priorita, vincoli e fattibilita",
-  "Se serve, fissiamo un sopralluogo",
-  "Ti proponiamo una soluzione tecnica coerente"
+  "Verifichiamo se parliamo di nuova costruzione, efficientamento o impianto specifico",
+  "Raccogliamo terreno, planimetrie, bollette, foto, vincoli o dati disponibili",
+  "Valutiamo fattibilità tecnica, urbanistica ed energetica",
+  "Se serve, fissiamo un sopralluogo tecnico",
+  "Ti indichiamo il prossimo passo: studio, progetto, computo o esclusione tecnica"
 ];
 
 const documents = [
+  "Dati del terreno edificabile, se disponibili",
+  "Planimetria o progetto preliminare",
   "Bollette elettriche ultimi 12 mesi",
   "Consumi riscaldamento",
   "Foto tetto o locale tecnico",
-  "Planimetria",
   "Dati caldaia o generatore esistente",
-  "Progetto nuova costruzione, se disponibile"
+  "Vincoli comunali o paesaggistici già noti"
 ];
 
 export default function ContactPage() {
@@ -37,9 +38,9 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Contatti</p>
-            <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Raccontaci il progetto</h1>
+            <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Avvia il tuo progetto in bioedilizia a Udine e Gorizia</h1>
             <p className="mt-6 text-xl leading-9 text-graphite/65">
-              Non facciamo preventivi seri senza dati. Piu informazioni inserisci, piu la prima risposta sara utile. Se hai gia bollette, foto, planimetrie o preventivi, segnalalo nel messaggio.
+              Per stimare case prefabbricate in legno, impianti fotovoltaici e biomasse non usiamo listini standard. Serve una prima analisi tecnica del terreno o dell'immobile esistente: vincoli, consumi, orientamento, locale tecnico, budget e obiettivo energetico.
             </p>
             <div className="mt-8 grid gap-3 text-graphite/65">
               <p>
@@ -49,7 +50,7 @@ export default function ContactPage() {
               <a href={`mailto:${site.email}`}>{site.email}</a>
               <a href="https://wa.me/39XXXXXXXXXX">Scrivici su WhatsApp [DA COMPLETARE: numero WhatsApp Business]</a>
               <p>{site.address}</p>
-              <p>Area servita: Udine, provincia di Udine, Friuli Venezia Giulia.</p>
+              <p>Area servita: Udine, Gorizia, province e Friuli-Venezia Giulia.</p>
             </div>
           </FadeIn>
           <FadeIn>
@@ -58,8 +59,10 @@ export default function ContactPage() {
               <label className="grid gap-2 text-sm text-graphite/60">Email<input required type="email" name="email" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
               <label className="grid gap-2 text-sm text-graphite/60">Telefono<input name="phone" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
               <label className="grid gap-2 text-sm text-graphite/60">Comune<input name="city" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Tipo di progetto<select name="projectType" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Nuova casa in legno</option><option>Riqualificazione edificio</option><option>Fotovoltaico</option><option>Biomassa</option><option>Soluzione integrata</option><option>Azienda agricola</option><option>Struttura ricettiva</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Stato attuale<select name="projectStatus" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Idea iniziale</option><option>Terreno disponibile</option><option>Progetto architettonico gia avviato</option><option>Edificio esistente</option><option>Preventivi gia ricevuti</option><option>Lavori gia iniziati</option></select></label>
+              <label className="grid gap-2 text-sm text-graphite/60">Possiedi già il terreno edificabile?<select name="landAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Si</option><option>No</option><option>Sto valutando l'acquisto</option><option>Non riguarda il mio caso</option></select></label>
+              <label className="grid gap-2 text-sm text-graphite/60">Tipo di intervento<select name="projectType" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Nuova costruzione in legno</option><option>Efficientamento energetico edificio esistente</option><option>Fotovoltaico e accumulo</option><option>Caldaia a biomasse</option><option>Soluzione integrata</option><option>Azienda agricola</option><option>Struttura ricettiva</option></select></label>
+              <label className="grid gap-2 text-sm text-graphite/60">Interesse specifico<select name="specificInterest" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Case in legno</option><option>Fotovoltaico</option><option>Biomasse</option><option>Casa + impianti integrati</option><option>Non so, voglio una diagnosi</option></select></label>
+              <label className="grid gap-2 text-sm text-graphite/60">Stato attuale<select name="projectStatus" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Idea iniziale</option><option>Terreno disponibile</option><option>Progetto architettonico già avviato</option><option>Edificio esistente</option><option>Preventivi già ricevuti</option><option>Lavori già iniziati</option></select></label>
               <label className="grid gap-2 text-sm text-graphite/60">Budget indicativo<select name="budget" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Sotto 20.000 euro</option><option>20.000-50.000 euro</option><option>50.000-150.000 euro</option><option>Oltre 150.000 euro</option><option>Da definire</option></select></label>
               <label className="grid gap-2 text-sm text-graphite/60">Tempi previsti<select name="timing" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Subito</option><option>Entro 3 mesi</option><option>Entro 6 mesi</option><option>Entro 12 mesi</option><option>Sto valutando</option></select></label>
               <label className="grid gap-2 text-sm text-graphite/60">Hai documenti disponibili?<select name="documentsAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Bollette</option><option>Foto tetto</option><option>Planimetrie</option><option>Progetto tecnico</option><option>Preventivi ricevuti</option><option>Nessun documento</option></select></label>
@@ -80,8 +83,8 @@ export default function ContactPage() {
                   Acconsento a ricevere comunicazioni informative o promozionali da GeoDomus. Il consenso e facoltativo e revocabile in qualsiasi momento.
                 </span>
               </label>
-              <p className="text-sm leading-6 text-graphite/55">Piu dati fornisci, piu utile sara la prima risposta. Non proponiamo pacchetti standard senza capire edificio, consumi e obiettivi.</p>
-              <button type="submit" className="min-h-12 rounded-md bg-graphite px-6 font-semibold text-white">Invia richiesta di valutazione</button>
+              <p className="text-sm leading-6 text-graphite/55">Più dati fornisci, più utile sara la prima risposta. Non proponiamo pacchetti standard senza capire terreno, edificio, consumi e obiettivi.</p>
+              <button type="submit" className="min-h-12 rounded-md bg-graphite px-6 font-semibold text-white">Richiedi sopralluogo tecnico o studio di fattibilità</button>
               <p className="text-sm leading-6 text-graphite/55">Richiesta ricevuta. Analizzeremo i dati inviati e ti ricontatteremo per indicarti il prossimo passo utile: raccolta documenti, sopralluogo, confronto tecnico o preventivo preliminare.</p>
             </form>
           </FadeIn>
@@ -103,14 +106,14 @@ export default function ContactPage() {
             </div>
           </FadeIn>
           <FadeIn className="rounded-lg border border-graphite/10 bg-warm p-7 shadow-soft">
-            <h2 className="text-3xl font-semibold tracking-tight">Documenti utili da preparare</h2>
+            <h2 className="text-3xl font-semibold tracking-tight">Dati NAP e documenti utili</h2>
             <div className="mt-6 grid gap-3">
               {documents.map((item) => (
                 <p key={item} className="rounded-md bg-white p-4 font-semibold text-graphite/72">{item}</p>
               ))}
             </div>
             <p className="mt-8 leading-8 text-graphite/65">
-              Non proponiamo interventi standard senza dati. Se una soluzione non e prioritaria o non ha senso nel tuo caso, va esclusa o rimandata.
+              Segnaposto NAP: GeoDomus srls in costituzione, ufficio Udine/Gorizia [DA COMPLETARE], telefono {site.phone}, email {site.email}, orari Lun-Ven 9:00-18:00 su appuntamento.
             </p>
           </FadeIn>
         </div>

@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Cookie policy",
-  description: "Informativa cookie di GeoDomus srls con categorie, finalita, consenso e gestione delle preferenze.",
+  description: "Informativa cookie di GeoDomus srls con categorie, finalità, consenso e gestione delle preferenze.",
   path: "/cookie-policy",
   keywords: ["cookie policy GeoDomus", "cookie GDPR", "preferenze cookie"]
 });
@@ -20,7 +20,7 @@ export default function CookiePolicyPage() {
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Informativa cookie</p>
             <h1 className="mt-5 text-6xl font-semibold tracking-tight md:text-8xl">Cookie policy</h1>
             <p className="mt-6 text-lg leading-8 text-graphite/65">
-              Questa pagina spiega quali cookie e strumenti simili possono essere usati sul sito GeoDomus, con quali finalita e come gestire il consenso.
+              Questa pagina spiega quali cookie e strumenti simili possono essere usati sul sito GeoDomus, con quali finalità e come gestire il consenso.
             </p>
             <p className="mt-4 text-sm font-semibold text-graphite/55">Ultimo aggiornamento: 4 giugno 2026.</p>
           </FadeIn>
@@ -32,7 +32,7 @@ export default function CookiePolicyPage() {
           <FadeIn>
             <h2 className="text-4xl font-semibold tracking-tight">Cosa sono i cookie</h2>
             <p className="mt-6 leading-8 text-graphite/65">
-              I cookie sono piccoli file o identificatori che un sito puo salvare sul dispositivo dell'utente. Alcuni sono necessari per il funzionamento del sito, altri possono essere usati per statistiche, marketing o profilazione e richiedono consenso preventivo quando non sono strettamente necessari.
+              I cookie sono piccoli file o identificatori che un sito può salvare sul dispositivo dell'utente. Alcuni sono necessari per il funzionamento del sito, altri possono essere usati per statistiche, marketing o profilazione e richiedono consenso preventivo quando non sono strettamente necessari.
             </p>
           </FadeIn>
           <FadeIn className="rounded-lg bg-warm p-6">
@@ -54,7 +54,7 @@ export default function CookiePolicyPage() {
             <div className="grid bg-graphite text-sm font-bold uppercase tracking-[.14em] text-white md:grid-cols-[.7fr_.45fr_1fr_1fr]">
               <p className="p-5">Categoria</p>
               <p className="border-t border-white/10 p-5 md:border-l md:border-t-0">Stato</p>
-              <p className="border-t border-white/10 p-5 md:border-l md:border-t-0">Finalita</p>
+              <p className="border-t border-white/10 p-5 md:border-l md:border-t-0">Finalità</p>
               <p className="border-t border-white/10 p-5 md:border-l md:border-t-0">Consenso</p>
             </div>
             {cookieCategories.map((category) => (

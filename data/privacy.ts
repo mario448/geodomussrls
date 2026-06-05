@@ -25,7 +25,7 @@ export const privacyTreatments = [
     title: "Navigazione del sito",
     data: "Dati tecnici necessari al funzionamento del sito, come indirizzi IP trattati dai sistemi di hosting, log tecnici, identificativi di sessione e preferenze cookie.",
     purpose: "Rendere disponibile il sito, mantenerlo sicuro, prevenire abusi e ricordare le preferenze privacy espresse dall'utente.",
-    legalBasis: "Legittimo interesse del titolare alla sicurezza e al funzionamento del sito; per i cookie tecnici non e richiesto il consenso.",
+    legalBasis: "Legittimo interesse del titolare alla sicurezza e al funzionamento del sito; per i cookie tecnici non è richiesto il consenso.",
     retention: "Per il tempo strettamente necessario alla gestione tecnica e di sicurezza del sito; le preferenze cookie possono essere conservate fino a 6 mesi."
   },
   {
@@ -58,7 +58,7 @@ export const cookieCategories = [
     name: "Cookie marketing e profilazione",
     status: "Non attivi al momento",
     description:
-      "Potrebbero essere usati per pubblicita personalizzata, remarketing, pixel o integrazioni social con finalita promozionali.",
+      "Potrebbero essere usati per pubblicita personalizzata, remarketing, pixel o integrazioni social con finalità promozionali.",
     consent: "Richiedono sempre consenso preventivo e revocabile.",
     examples: "Pixel pubblicitari o strumenti di remarketing, se installati in futuro."
   }

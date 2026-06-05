@@ -7,13 +7,13 @@ export const site = {
   address: "Via delle Energie 18, 33100 Udine UD",
   area: "Udine, provincia di Udine e Friuli Venezia Giulia",
   description:
-    "GeoDomus srls segue consulenza, progettazione, coordinamento e realizzazione di case prefabbricate in legno, impianti fotovoltaici e sistemi di riscaldamento a biomassa in Friuli Venezia Giulia.",
+    "GeoDomus srls e studio tecnico e impresa edile specializzata in bioedilizia, case prefabbricate in legno, fotovoltaico e impianti a biomasse in Friuli Venezia Giulia.",
   nav: [
     { href: "/", label: "Home" },
-    { href: "/case-prefabbricate-legno-udine", label: "Case in legno" },
-    { href: "/fotovoltaico-udine-fvg", label: "Fotovoltaico" },
-    { href: "/riscaldamento-biomassa-udine", label: "Biomassa" },
-    { href: "/soluzioni-integrate", label: "Soluzioni integrate" },
+    { href: "/case-prefabbricate-legno-udine", label: "Costruire casa" },
+    { href: "/soluzioni-integrate", label: "Riqualificare" },
+    { href: "/fotovoltaico-udine-fvg", label: "Ridurre bollette" },
+    { href: "/blog", label: "Guide" },
     { href: "/contatti", label: "Contatti" }
   ]
 };
@@ -92,7 +92,7 @@ export const faqs = {
     {
       question: "Una casa in legno è adatta al clima del Friuli Venezia Giulia?",
       answer:
-        "Si. Con stratigrafie corrette, isolamento continuo e progettazione attenta ai ponti termici, una casa in legno offre comfort invernale, protezione estiva e ottime prestazioni energetiche."
+        "Sì. Con stratigrafie corrette, isolamento continuo e progettazione attenta ai ponti termici, una casa in legno offre comfort invernale, protezione estiva e ottime prestazioni energetiche."
     },
     {
       question: "GeoDomus segue anche progettazione e personalizzazione?",
@@ -109,12 +109,12 @@ export const faqs = {
     {
       question: "Il fotovoltaico si può integrare con una casa in legno?",
       answer:
-        "Si. Nelle abitazioni efficienti il fotovoltaico lavora bene con impianti a basso consumo, sistemi di accumulo e soluzioni di riscaldamento progettate in modo integrato."
+        "Sì. Nelle abitazioni efficienti il fotovoltaico lavora bene con impianti a basso consumo, sistemi di accumulo e soluzioni di riscaldamento progettate in modo integrato."
     },
     {
       question: "GeoDomus realizza impianti anche per aziende?",
       answer:
-        "Si, GeoDomus valuta impianti fotovoltaici per abitazioni, piccole imprese, aziende agricole e strutture ricettive in Friuli Venezia Giulia."
+        "Sì, GeoDomus valuta impianti fotovoltaici per abitazioni, piccole imprese, aziende agricole e strutture ricettive in Friuli Venezia Giulia."
     }
   ],
   biomass: [
@@ -126,7 +126,7 @@ export const faqs = {
     {
       question: "La biomassa è adatta a una casa efficiente?",
       answer:
-        "Si, se l'impianto viene dimensionato sui reali fabbisogni dell'edificio. In case ben isolate, la biomassa può coprire il riscaldamento con consumi contenuti."
+        "Sì, se l'impianto viene dimensionato sui reali fabbisogni dell'edificio. In case ben isolate, la biomassa può coprire il riscaldamento con consumi contenuti."
     },
     {
       question: "Serve uno spazio tecnico dedicato?",

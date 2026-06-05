@@ -16,14 +16,14 @@ const categories = ["Case in legno", "Fotovoltaico", "Biomassa", "Soluzioni inte
 
 const editorialPlan = [
   ["Casa in legno in Friuli: errori da evitare prima del progetto", "Terreno, orientamento, tetto, impianti e capitolato prima del modello estetico."],
-  ["Fotovoltaico con accumulo: quando conviene davvero", "Consumi, autoconsumo, fasce orarie, batterie e casi in cui l'accumulo puo aspettare."],
+  ["Fotovoltaico con accumulo: quando conviene davvero", "Consumi, autoconsumo, fasce orarie, batterie e casi in cui l'accumulo può aspettare."],
   ["Biomassa, pellet o pompa di calore: criteri pratici di scelta", "Spazio tecnico, gestione combustibile, fabbisogno termico, manutenzione e vincoli."],
-  ["Quanto costa sbagliare l'ordine degli interventi in una riqualificazione", "Esempi di varianti, doppie lavorazioni, impianti sovradimensionati e priorita invertite."],
-  ["General contractor energetico: cosa deve essere scritto nel contratto", "Responsabilita, capitolato, cronoprogramma, garanzie applicabili e gestione varianti."],
+  ["Quanto costa sbagliare l'ordine degli interventi in una riqualificazione", "Esempi di varianti, doppie lavorazioni, impianti sovradimensionati e priorità invertite."],
+  ["General contractor energetico: cosa deve essere scritto nel contratto", "Responsabilità, capitolato, cronoprogramma, garanzie applicabili e gestione varianti."],
   ["Casa in legno e fotovoltaico: predisposizioni da fare prima del cantiere", "Passaggi cavi, quadro elettrico, orientamento tetto, accumulo e monitoraggio."],
-  ["Preventivi fotovoltaico: perche confrontare solo i kWp e un errore", "Componenti, ombre, esposizione, profilo consumi, garanzie e costo reale dell'impianto."],
-  ["Biomassa per aziende agricole: quando ha senso e quando no", "Disponibilita combustibile, spazi, fabbisogni, accessi, manutenzione e continuita d'uso."],
-  ["Come capire se una casa esistente puo diventare davvero efficiente", "Bollette, involucro, impianti, tetto, serramenti, umidita e interventi prioritari."],
+  ["Preventivi fotovoltaico: perché confrontare solo i kWp è un errore", "Componenti, ombre, esposizione, profilo consumi, garanzie e costo reale dell'impianto."],
+  ["Biomassa per aziende agricole: quando ha senso e quando no", "Disponibilità combustibile, spazi, fabbisogni, accessi, manutenzione e continuità d'uso."],
+  ["Come capire se una casa esistente può diventare davvero efficiente", "Bollette, involucro, impianti, tetto, serramenti, umidita e interventi prioritari."],
   ["Fotovoltaico, biomassa e casa in legno: come evitare soluzioni scollegate", "Metodo per far dialogare edificio, energia elettrica, calore e budget."]
 ];
 

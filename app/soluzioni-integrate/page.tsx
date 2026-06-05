@@ -15,10 +15,10 @@ export const metadata = pageMetadata({
 });
 
 const modules = [
-  "Priorita degli interventi",
+  "Priorità degli interventi",
   "Soluzioni da escludere",
   "Possibili fasi operative",
-  "Criticita tecniche",
+  "Criticità tecniche",
   "Dati mancanti da raccogliere",
   "Indicazioni per confrontare preventivi"
 ];

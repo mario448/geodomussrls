@@ -121,7 +121,7 @@ export function ServicePage(props: ServicePageProps) {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
           <FadeIn>
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Da verificare</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Quando puo non avere senso</h2>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Quando può non avere senso</h2>
             <div className="mt-10 grid gap-3">
               {props.whenNotSense.map((item) => (
                 <p key={item} className="rounded-lg bg-white p-5 text-xl font-semibold shadow-soft">{item}</p>
@@ -188,7 +188,7 @@ export function ServicePage(props: ServicePageProps) {
           </div>
         </div>
       </section>
-      <CTA title={props.cta} text="GeoDomus valuta esigenze, contesto e obiettivi energetici prima di proporre la soluzione piu adatta." />
+      <CTA title={props.cta} text="GeoDomus valuta esigenze, contesto e obiettivi energetici prima di proporre la soluzione più adatta." />
     </main>
   );
 }
