@@ -29,9 +29,9 @@ export type ServicePageProps = {
 export function ServicePage(props: ServicePageProps) {
   const serviceVisuals = [
     { src: props.image, alt: props.imageAlt, label: props.title },
-    { src: "/images/home-cantiere-legno-geodomus.jpg", alt: "Dettaglio di struttura e involucro in legno", label: "Cantiere e involucro" },
-    { src: "/images/home-fotovoltaico-tetto-geodomus.jpg", alt: "Pannelli fotovoltaici su tetto efficiente", label: "Fotovoltaico integrato" },
-    { src: "/images/home-biomassa-locale-geodomus.jpg", alt: "Locale tecnico con impianto a biomassa", label: "Biomassa e impianti" }
+    { src: "/images/home-cantiere-legno-geodomus.jpg", alt: "Dettaglio di struttura e involucro in legno per bioedilizia a Udine e Gorizia", label: "Cantiere e involucro" },
+    { src: "/images/home-fotovoltaico-tetto-geodomus.jpg", alt: "Pannelli fotovoltaici su tetto efficiente in Friuli Venezia Giulia", label: "Fotovoltaico integrato" },
+    { src: "/images/home-biomassa-locale-geodomus.jpg", alt: "Locale tecnico con impianto a biomassa pellet o cippato in provincia di Udine", label: "Biomassa e impianti" }
   ];
 
   return (

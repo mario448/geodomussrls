@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTA } from "@/components/CTA";
 import { FadeIn } from "@/components/Motion";
@@ -23,6 +24,20 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPost(params.slug);
   if (!post) notFound();
+  const image = post.slug.includes("fotovoltaico")
+    ? {
+        src: "/images/home-fotovoltaico-tetto-geodomus.jpg",
+        alt: `Fotovoltaico in Friuli Venezia Giulia per guida GeoDomus: ${post.title}`
+      }
+    : post.slug.includes("biomassa")
+      ? {
+          src: "/images/home-biomassa-locale-geodomus.jpg",
+          alt: `Locale tecnico biomassa a Udine e FVG per guida GeoDomus: ${post.title}`
+        }
+      : {
+          src: "/images/case-legno-geodomus.jpg",
+          alt: `Casa prefabbricata in legno e bioedilizia in FVG per guida GeoDomus: ${post.title}`
+        };
 
   return (
     <main>
@@ -32,6 +47,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Approfondimento GeoDomus</p>
           <h1 className="mt-5 text-5xl font-semibold tracking-tight md:text-7xl">{post.title}</h1>
           <p className="mt-6 text-xl leading-9 text-graphite/65">{post.excerpt}</p>
+        </FadeIn>
+        <FadeIn className="relative mx-auto mt-10 aspect-[16/8] max-w-5xl overflow-hidden rounded-lg bg-graphite shadow-soft">
+          <Image src={image.src} alt={image.alt} fill priority quality={78} sizes="(min-width: 1024px) 80vw, 100vw" className="object-cover" />
         </FadeIn>
         <FadeIn className="prose-geodomus mx-auto mt-14 max-w-4xl">
           {post.headings.map((heading, index) => (

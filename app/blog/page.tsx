@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FadeIn } from "@/components/Motion";
 import { blogPosts } from "@/data/blog";
@@ -13,6 +14,12 @@ export const metadata = pageMetadata({
 });
 
 const categories = ["Case in legno", "Fotovoltaico", "Biomassa", "Soluzioni integrate", "Incentivi e normative", "Errori da evitare"];
+
+const categoryImages = [
+  { src: "/images/case-legno-geodomus.jpg", alt: "Guida case prefabbricate in legno Udine e bioedilizia FVG", label: "Case in legno" },
+  { src: "/images/home-fotovoltaico-tetto-geodomus.jpg", alt: "Guida installazione impianti fotovoltaici FVG e incentivi regionali", label: "Fotovoltaico FVG" },
+  { src: "/images/home-biomassa-locale-geodomus.jpg", alt: "Guida caldaie a biomasse Udine pellet cippato e locale tecnico", label: "Biomasse" }
+];
 
 const editorialPlan = [
   ["Casa in legno in Friuli: errori da evitare prima del progetto", "Terreno, orientamento, tetto, impianti e capitolato prima del modello estetico."],
@@ -47,6 +54,16 @@ export default function BlogPage() {
               ))}
             </div>
           </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
+            {categoryImages.map((image) => (
+              <FadeIn key={image.src} className="overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
+                <div className="relative aspect-[16/10]">
+                  <Image src={image.src} alt={image.alt} fill quality={76} sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+                </div>
+                <p className="p-4 text-sm font-semibold leading-6 text-graphite/70">{image.label}</p>
+              </FadeIn>
+            ))}
+          </div>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
               <FadeIn key={post.slug} className="rounded-lg border border-graphite/10 bg-white p-7 shadow-soft">

@@ -19,7 +19,7 @@ export default function BiomassPage() {
       intro="La biomassa ha senso solo se spazio, fabbisogno e gestione sono coerenti."
       description="Riscaldamento a biomassa a Udine e in Friuli Venezia Giulia."
       image="/images/biomassa-geodomus.jpg"
-      imageAlt="Locale tecnico moderno con sistema di riscaldamento a biomassa e deposito pellet"
+      imageAlt="Locale tecnico moderno con sistema di riscaldamento a biomassa e deposito pellet in provincia di Udine"
       points={["Pellet, legna e cippato", "Riduzione dei costi di esercizio", "Soluzione per abitazioni e aziende agricole", "Adatto a strutture ricettive", "Integrazione con fotovoltaico", "Valutazione locale e tecnica"]}
       problemTitle="Una caldaia o stufa a biomassa richiede compatibilita tecnica."
       problemText="Una caldaia o stufa a biomassa può ridurre la dipendenza da altre fonti, ma va valutata con attenzione: servono spazio tecnico, combustibile adeguato, manutenzione, canna fumaria e compatibilita con l'edificio."

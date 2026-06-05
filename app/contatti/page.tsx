@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FadeIn } from "@/components/Motion";
 import { site } from "@/data/site";
@@ -30,6 +31,24 @@ const documents = [
   "Vincoli comunali o paesaggistici già noti"
 ];
 
+const contactVisuals = [
+  {
+    src: "/images/home-fotovoltaico-tetto-geodomus.jpg",
+    alt: "Foto tetto necessaria per valutare fotovoltaico e accumulo a Udine e Gorizia",
+    label: "Foto del tetto"
+  },
+  {
+    src: "/images/home-biomassa-locale-geodomus.jpg",
+    alt: "Locale tecnico da fotografare per valutare caldaie a biomasse in Friuli Venezia Giulia",
+    label: "Locale tecnico"
+  },
+  {
+    src: "/images/case-legno-geodomus.jpg",
+    alt: "Riferimento per progetto di casa prefabbricata in legno in bioedilizia FVG",
+    label: "Idea casa in legno"
+  }
+];
+
 export default function ContactPage() {
   return (
     <main>
@@ -54,19 +73,39 @@ export default function ContactPage() {
             </div>
           </FadeIn>
           <FadeIn>
-            <form className="grid gap-4 rounded-lg bg-white p-6 shadow-soft">
-              <label className="grid gap-2 text-sm text-graphite/60">Nome e cognome<input required name="name" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Email<input required type="email" name="email" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Telefono<input name="phone" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Comune<input name="city" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Possiedi già il terreno edificabile?<select name="landAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Si</option><option>No</option><option>Sto valutando l'acquisto</option><option>Non riguarda il mio caso</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Tipo di intervento<select name="projectType" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Nuova costruzione in legno</option><option>Efficientamento energetico edificio esistente</option><option>Fotovoltaico e accumulo</option><option>Caldaia a biomasse</option><option>Soluzione integrata</option><option>Azienda agricola</option><option>Struttura ricettiva</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Interesse specifico<select name="specificInterest" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Case in legno</option><option>Fotovoltaico</option><option>Biomasse</option><option>Casa + impianti integrati</option><option>Non so, voglio una diagnosi</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Stato attuale<select name="projectStatus" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Idea iniziale</option><option>Terreno disponibile</option><option>Progetto architettonico già avviato</option><option>Edificio esistente</option><option>Preventivi già ricevuti</option><option>Lavori già iniziati</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Budget indicativo<select name="budget" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Sotto 20.000 euro</option><option>20.000-50.000 euro</option><option>50.000-150.000 euro</option><option>Oltre 150.000 euro</option><option>Da definire</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Tempi previsti<select name="timing" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Subito</option><option>Entro 3 mesi</option><option>Entro 6 mesi</option><option>Entro 12 mesi</option><option>Sto valutando</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Hai documenti disponibili?<select name="documentsAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Bollette</option><option>Foto tetto</option><option>Planimetrie</option><option>Progetto tecnico</option><option>Preventivi ricevuti</option><option>Nessun documento</option></select></label>
-              <label className="grid gap-2 text-sm text-graphite/60">Messaggio<textarea required name="message" rows={5} className="rounded-md border border-graphite/10 p-4 text-graphite" /></label>
+            <form className="grid gap-5 rounded-lg bg-white p-6 shadow-soft">
+              <div className="rounded-lg border border-graphite/10 bg-warm p-5">
+                <p className="text-xs font-bold uppercase tracking-[.16em] text-forest">Opzione A</p>
+                <h2 className="mt-2 text-3xl font-semibold tracking-tight">Primo contatto rapido</h2>
+                <p className="mt-3 text-sm leading-6 text-graphite/60">Ti ricontattiamo per capire se possiamo aiutarti. Bastano i dati minimi.</p>
+                <div className="mt-5 grid gap-4">
+                  <label className="grid gap-2 text-sm text-graphite/60">Nome e cognome<input required name="name" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <label className="grid gap-2 text-sm text-graphite/60">Email<input required type="email" name="email" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
+                    <label className="grid gap-2 text-sm text-graphite/60">Telefono<input name="phone" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <label className="grid gap-2 text-sm text-graphite/60">Comune<input name="city" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite" /></label>
+                    <label className="grid gap-2 text-sm text-graphite/60">Tipo di intervento<select name="projectType" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Nuova costruzione in legno</option><option>Efficientamento energetico edificio esistente</option><option>Fotovoltaico e accumulo</option><option>Caldaia a biomasse</option><option>Soluzione integrata</option><option>Azienda agricola</option><option>Struttura ricettiva</option></select></label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-lg border border-graphite/10 p-5">
+                <p className="text-xs font-bold uppercase tracking-[.16em] text-timber">Opzione B</p>
+                <h2 className="mt-2 text-3xl font-semibold tracking-tight">Valutazione preliminare completa</h2>
+                <p className="mt-3 text-sm leading-6 text-graphite/60">Compila più dati solo se vuoi una prima analisi più utile.</p>
+                <div className="mt-5 grid gap-4">
+                  <label className="grid gap-2 text-sm text-graphite/60">Possiedi già il terreno edificabile?<select name="landAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Si</option><option>No</option><option>Sto valutando l'acquisto</option><option>Non riguarda il mio caso</option></select></label>
+                  <label className="grid gap-2 text-sm text-graphite/60">Interesse specifico<select name="specificInterest" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Case in legno</option><option>Fotovoltaico</option><option>Biomasse</option><option>Casa + impianti integrati</option><option>Non so, voglio una diagnosi</option></select></label>
+                  <label className="grid gap-2 text-sm text-graphite/60">Stato attuale<select name="projectStatus" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Idea iniziale</option><option>Terreno disponibile</option><option>Progetto architettonico già avviato</option><option>Edificio esistente</option><option>Preventivi già ricevuti</option><option>Lavori già iniziati</option></select></label>
+                  <label className="grid gap-2 text-sm text-graphite/60">Budget indicativo<select name="budget" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Preferisco parlarne al primo contatto</option><option>Sotto 20.000 euro</option><option>20.000-50.000 euro</option><option>50.000-150.000 euro</option><option>Oltre 150.000 euro</option><option>Da definire</option></select></label>
+                  <label className="grid gap-2 text-sm text-graphite/60">Tempi previsti<select name="timing" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Sto valutando</option><option>Subito</option><option>Entro 3 mesi</option><option>Entro 6 mesi</option><option>Entro 12 mesi</option></select></label>
+                  <label className="grid gap-2 text-sm text-graphite/60">Hai documenti disponibili?<select name="documentsAvailable" className="min-h-12 rounded-md border border-graphite/10 px-4 text-graphite"><option>Nessun documento</option><option>Bollette</option><option>Foto tetto</option><option>Planimetrie</option><option>Progetto tecnico</option><option>Preventivi ricevuti</option></select></label>
+                </div>
+              </div>
+
+              <label className="grid gap-2 text-sm text-graphite/60">Messaggio breve<textarea required name="message" rows={5} className="rounded-md border border-graphite/10 p-4 text-graphite" /></label>
               <label className="flex gap-3 text-sm leading-6 text-graphite/60">
                 <input required type="checkbox" name="privacy" className="mt-1" />
                 <span>
@@ -116,6 +155,24 @@ export default function ContactPage() {
               Segnaposto NAP: GeoDomus srls in costituzione, ufficio Udine/Gorizia [DA COMPLETARE], telefono {site.phone}, email {site.email}, orari Lun-Ven 9:00-18:00 su appuntamento.
             </p>
           </FadeIn>
+        </div>
+      </section>
+      <section className="px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Cosa puoi inviarci</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Tre immagini semplici rendono la prima risposta molto più utile.</h2>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
+            {contactVisuals.map((image) => (
+              <FadeIn key={image.src} className="overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
+                <div className="relative aspect-[4/3]">
+                  <Image src={image.src} alt={image.alt} fill quality={76} sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+                </div>
+                <p className="p-4 text-sm font-semibold leading-6 text-graphite/70">{image.label}</p>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
     </main>

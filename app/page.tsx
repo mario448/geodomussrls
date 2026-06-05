@@ -75,12 +75,12 @@ const trustCards = [
 
 const guarantees = [
   {
-    title: "Costo di costruzione bloccato",
-    text: "Le lavorazioni previste vengono definite in capitolato e preventivo approvato. Nessuna variante in corso d'opera sulle voci già contrattualizzate senza approvazione scritta del cliente."
+    title: "Costo bloccato sulle voci contrattualizzate",
+    text: "Le lavorazioni incluse nel capitolato firmato non cambiano prezzo senza approvazione scritta. Restano escluse variazioni richieste dal cliente, imprevisti non rilevabili prima delle indagini, prescrizioni degli enti e modifiche normative."
   },
   {
-    title: "Rispetto del cronoprogramma",
-    text: "Il percorso può includere tempi di consegna, dipendenze autorizzative e penali contrattuali per ritardi imputabili a GeoDomus. Il cantiere viene gestito su fasi, non a improvvisazione."
+    title: "Cronoprogramma con responsabilità definite",
+    text: "Ogni fase ha responsabile, dipendenze e documenti di avanzamento. I ritardi imputabili a GeoDomus vengono gestiti secondo condizioni contrattuali esplicite; ritardi di enti, forniture o varianti vengono separati."
   },
   {
     title: "Ingegnerizzazione impiantistica integrata",
@@ -93,6 +93,68 @@ const leadMagnets = [
   ["5 errori che fanno salire i costi", "Fotovoltaico deciso tardi, locale tecnico non previsto, biomassa senza deposito e preventivi non confrontabili."],
   ["Guida incentivi FVG 2026", "Una traccia per capire quali incentivi vanno verificati prima di firmare."],
   ["Schema ROI energetico", "Un modello semplice per confrontare investimento, risparmio annuo, tempi di ritorno e rischi tecnici."]
+];
+
+const trustBeforeData = [
+  "Non vendiamo impianti standard prima di leggere edificio, consumi e vincoli.",
+  "Non facciamo preventivi seri senza sopralluogo o dati minimi verificabili.",
+  "Separiamo sempre consulenza, progettazione, fornitura, posa e assistenza.",
+  "Ti diciamo anche quando non conviene procedere o quando un intervento va rimandato.",
+  "Ogni proposta deve indicare cosa è compreso, escluso, verificato e da approfondire.",
+  "Prima della firma servono capitolato, responsabilità, cronoprogramma e condizioni."
+];
+
+const preliminaryOutputs = [
+  "schema delle criticità tecniche",
+  "ordine corretto degli interventi",
+  "stima investimento per fasce",
+  "documenti mancanti",
+  "decisione: procedere, rimandare o escludere"
+];
+
+const practicalMethod = [
+  ["Sopralluogo tetto", "foto tetto, orientamento e ombre", "scheda esposizione e superficie utile"],
+  ["Analisi consumi", "bollette oscurate e profilo d'uso", "profilo consumi elettrici e termici"],
+  ["Locale tecnico", "foto vano tecnico, accessi e canna fumaria", "verifica spazi, deposito e manutenzione"],
+  ["Capitolato", "schermata oscurata di voci e inclusioni", "elenco incluso, escluso, da verificare"],
+  ["Collaudo", "quadro, inverter, generatore o accumulo", "verbale finale e documentazione impianto"]
+];
+
+const notDo = [
+  "Non dimensioniamo fotovoltaico solo sui metri quadri del tetto.",
+  "Non consigliamo biomassa senza deposito, canna fumaria e fabbisogno.",
+  "Non proponiamo case in legno senza capitolato impiantistico.",
+  "Non confrontiamo preventivi non equivalenti.",
+  "Non promettiamo risparmi senza bollette e dati reali."
+];
+
+const targetBlocks = [
+  ["Famiglie che vogliono costruire", "Progetto casa e impianti decisi separatamente", "Capitolato integrato casa-impianti-cantiere", "Verifica se il progetto è pronto"],
+  ["Proprietari che riqualificano", "Bollette alte e priorità degli interventi poco chiare", "Sequenza tecnica tra involucro, tetto, fotovoltaico e calore", "Ordina gli interventi"],
+  ["Aziende agricole e agriturismi", "Consumi elevati, biomassa disponibile e continuità operativa", "Analisi consumi, superfici, deposito e fabbisogni stagionali", "Valuta progetto aziendale"]
+];
+
+const geoVisuals = [
+  {
+    src: "/images/home-cantiere-legno-geodomus.jpg",
+    alt: "Dettaglio di cantiere per casa prefabbricata in legno a Udine e Gorizia",
+    label: "Struttura in legno e posa in FVG"
+  },
+  {
+    src: "/images/home-fotovoltaico-tetto-geodomus.jpg",
+    alt: "Tetto con impianto fotovoltaico per abitazione efficiente in Friuli Venezia Giulia",
+    label: "Verifica tetto, ombre e kWp installabili"
+  },
+  {
+    src: "/images/home-biomassa-locale-geodomus.jpg",
+    alt: "Locale tecnico per caldaia a biomasse a pellet o cippato in provincia di Udine",
+    label: "Locale tecnico e biomasse"
+  },
+  {
+    src: "/images/home-area-fvg-geodomus.jpg",
+    alt: "Contesto residenziale in Friuli Venezia Giulia per progetto di bioedilizia GeoDomus",
+    label: "Territorio FVG, vincoli e clima locale"
+  }
 ];
 
 const homeJsonLd = {
@@ -136,11 +198,11 @@ export default function HomePage() {
               Il risultato: casa in legno chiavi in mano, impianti dimensionati prima del cantiere e meno rischio di varianti tecniche.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="#diagnostica" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-bold text-graphite shadow-lg shadow-black/25">
-                Richiedi studio di fattibilità tecnico-economica
+              <Link href="/contatti" className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 font-bold text-graphite shadow-lg shadow-black/25">
+                Richiedi valutazione preliminare
               </Link>
-              <Link href="#metodo-geodomus" className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/45 bg-white/16 px-6 font-bold text-white backdrop-blur">
-                Vedi come evitiamo varianti
+              <Link href="#diagnostica" className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/45 bg-white/16 px-6 font-bold text-white backdrop-blur">
+                Fai la diagnostica veloce
               </Link>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -152,6 +214,22 @@ export default function HomePage() {
               ))}
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Perché fidarsi prima dei dati</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Prima di chiederti informazioni, ti diciamo come lavoriamo.</h2>
+          </FadeIn>
+          <div className="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            {trustBeforeData.map((item) => (
+              <FadeIn key={item} className="rounded-lg border border-graphite/10 bg-warm p-5 font-semibold leading-7 text-graphite/72">
+                {item}
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -167,6 +245,22 @@ export default function HomePage() {
           <FadeIn>
             <HomeLeadForm />
           </FadeIn>
+        </div>
+      </section>
+
+      <section className="bg-stone/55 px-5 py-16 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.75fr_1.25fr]">
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Output concreto</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Cosa ricevi dopo la valutazione preliminare.</h2>
+          </FadeIn>
+          <div className="grid gap-3 md:grid-cols-2">
+            {preliminaryOutputs.map((item) => (
+              <FadeIn key={item} className="rounded-lg bg-white p-5 text-xl font-semibold shadow-soft">
+                {item}
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -193,6 +287,25 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Immagini tecniche</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Cantiere, tetto, locale tecnico e territorio: le verifiche che contano.</h2>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {geoVisuals.map((image) => (
+              <FadeIn key={image.src} className="overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
+                <div className="relative aspect-[4/3]">
+                  <Image src={image.src} alt={image.alt} fill quality={76} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
+                </div>
+                <p className="p-4 text-sm font-semibold leading-6 text-graphite/70">{image.label}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <FadeIn className="max-w-4xl">
@@ -213,6 +326,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-stone/55 px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Metodo in pratica</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Meno dichiarazioni, più prove tecniche.</h2>
+          </FadeIn>
+          <div className="mt-12 overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
+            <div className="grid bg-graphite text-sm font-bold uppercase tracking-[.14em] text-white md:grid-cols-3">
+              <p className="p-5">Fase</p>
+              <p className="border-t border-white/10 p-5 md:border-l md:border-t-0">Foto o evidenza reale</p>
+              <p className="border-t border-white/10 p-5 md:border-l md:border-t-0">Documento prodotto</p>
+            </div>
+            {practicalMethod.map(([phase, proof, output]) => (
+              <div key={phase} className="grid border-t border-graphite/10 md:grid-cols-3">
+                <p className="p-5 text-xl font-semibold">{phase}</p>
+                <p className="border-t border-graphite/10 p-5 leading-7 text-graphite/65 md:border-l md:border-t-0">{proof}</p>
+                <p className="border-t border-graphite/10 p-5 font-semibold leading-7 text-forest md:border-l md:border-t-0">{output}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.82fr_1.18fr]">
           <FadeIn>
@@ -226,6 +362,22 @@ export default function HomePage() {
             {risks.map((risk) => (
               <FadeIn key={risk} className="rounded-lg border border-graphite/10 bg-warm p-6">
                 <p className="text-xl font-semibold tracking-tight">{risk}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Cosa non facciamo</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">No a preventivi rapidi che diventano costi extra.</h2>
+          </FadeIn>
+          <div className="grid gap-3 md:grid-cols-2">
+            {notDo.map((item) => (
+              <FadeIn key={item} className="rounded-lg border border-graphite/10 bg-white p-5 font-semibold leading-7 text-graphite/72 shadow-soft">
+                {item}
               </FadeIn>
             ))}
           </div>
@@ -255,6 +407,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-white px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Percorsi verticali</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Problemi diversi, analisi diverse.</h2>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 lg:grid-cols-3">
+            {targetBlocks.map(([target, problem, output, cta]) => (
+              <FadeIn key={target} className="rounded-lg border border-graphite/10 bg-warm p-6">
+                <h3 className="text-2xl font-semibold tracking-tight">{target}</h3>
+                <p className="mt-5 text-xs font-bold uppercase tracking-[.14em] text-timber">Problema</p>
+                <p className="mt-2 leading-7 text-graphite/65">{problem}</p>
+                <p className="mt-5 text-xs font-bold uppercase tracking-[.14em] text-forest">Output GeoDomus</p>
+                <p className="mt-2 leading-7 text-graphite/65">{output}</p>
+                <Link href="/contatti" className="mt-6 inline-flex min-h-11 items-center rounded-md bg-graphite px-4 text-sm font-bold text-white">
+                  {cta}
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <FadeIn className="max-w-4xl">
@@ -274,6 +449,26 @@ export default function HomePage() {
                 </FadeIn>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-stone/55 px-5 py-20 lg:px-8">
+        <div className="mx-auto rounded-lg bg-white p-7 shadow-soft lg:p-10">
+          <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Esempio di analisi tipo</p>
+          <h2 className="mt-4 max-w-5xl text-5xl font-semibold tracking-tight lg:text-7xl">Abitazione in provincia di Udine: come ragioniamo prima del preventivo.</h2>
+          <div className="mt-8 grid gap-4 lg:grid-cols-4">
+            {[
+              ["Situazione iniziale", "Casa esistente con tetto utilizzabile, consumi serali elevati e riscaldamento da verificare."],
+              ["Analisi", "Fotovoltaico dimensionato sui consumi, accumulo da valutare, priorità su isolamento tetto."],
+              ["Decisione", "Fase 1 predisposizione e isolamento. Fase 2 fotovoltaico dopo verifica ombre e consumi."],
+              ["Nota", "Esempio non riferito a cliente reale: serve a mostrare il metodo senza inventare casi studio."]
+            ].map(([title, text]) => (
+              <div key={title} className="rounded-md bg-warm p-5">
+                <h3 className="font-semibold">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-graphite/65">{text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

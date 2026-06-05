@@ -100,7 +100,7 @@ export function HomeLeadForm() {
         <div className="grid gap-4">
           <div>
             <p className="text-xs font-bold uppercase tracking-[.16em] text-forest">Quiz veloce</p>
-            <h3 className="mt-2 text-3xl font-semibold tracking-tight">Qual e la tua priorità principale?</h3>
+            <h3 className="mt-2 text-3xl font-semibold tracking-tight">Qual è la tua priorità principale?</h3>
             <p className="mt-3 text-sm leading-6 text-graphite/58">45 secondi, nessun dato personale in questa fase.</p>
           </div>
           <div className="grid gap-2">
@@ -117,7 +117,7 @@ export function HomeLeadForm() {
             ))}
           </div>
           <button type="button" onClick={() => setStep("diagnosis")} className="min-h-12 rounded-md bg-forest px-6 py-4 text-base font-bold text-white shadow-soft">
-            Continua con la diagnostica
+            Fai la diagnostica veloce
           </button>
         </div>
       ) : (

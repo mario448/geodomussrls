@@ -19,7 +19,7 @@ export default function SolarPage() {
       intro="Il fotovoltaico conviene solo se e dimensionato sui tuoi consumi reali."
       description="Impianti fotovoltaici a Udine e in Friuli Venezia Giulia."
       image="/images/fotovoltaico-geodomus.jpg"
-      imageAlt="Impianto fotovoltaico integrato sul tetto di una casa sostenibile"
+      imageAlt="Impianto fotovoltaico integrato sul tetto di una casa sostenibile a Udine e in Friuli Venezia Giulia"
       points={["Riduzione delle bollette", "Autoconsumo intelligente", "Accumulo energetico", "Integrazione con pompe di calore o biomassa", "Soluzioni per abitazioni e aziende", "Monitoraggio delle prestazioni"]}
       problemTitle="Un impianto non va scelto partendo dal numero di pannelli."
       problemText="Un impianto non va scelto partendo dal numero di pannelli, ma da consumi, autoconsumo, esposizione, accumulo, abitudini e obiettivi futuri."

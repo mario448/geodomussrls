@@ -33,10 +33,10 @@ const usefulFor = [
 ];
 
 const integratedGallery = [
-  { src: "/images/villa-geodomus-hero-v3.jpg", alt: "Casa moderna efficiente", label: "Sistema abitativo" },
-  { src: "/images/home-cantiere-legno-geodomus.jpg", alt: "Dettaglio struttura in legno", label: "Involucro" },
-  { src: "/images/home-fotovoltaico-tetto-geodomus.jpg", alt: "Fotovoltaico su copertura", label: "Produzione elettrica" },
-  { src: "/images/home-biomassa-locale-geodomus.jpg", alt: "Locale tecnico biomassa", label: "Generazione termica" }
+  { src: "/images/villa-geodomus-hero-v3.jpg", alt: "Casa moderna efficiente in Friuli Venezia Giulia con progetto energia integrato", label: "Sistema abitativo FVG" },
+  { src: "/images/home-cantiere-legno-geodomus.jpg", alt: "Dettaglio struttura in legno per bioedilizia a Udine e Gorizia", label: "Involucro e cantiere" },
+  { src: "/images/home-fotovoltaico-tetto-geodomus.jpg", alt: "Fotovoltaico su copertura per abitazione efficiente in provincia di Udine", label: "Produzione elettrica" },
+  { src: "/images/home-biomassa-locale-geodomus.jpg", alt: "Locale tecnico biomassa per riscaldamento a pellet o cippato in FVG", label: "Generazione termica" }
 ];
 
 export default function IntegratedPage() {

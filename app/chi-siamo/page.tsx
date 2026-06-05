@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTA } from "@/components/CTA";
 import { FadeIn } from "@/components/Motion";
@@ -31,6 +32,24 @@ const values = [
   {
     title: "Conoscenza del FVG",
     text: "Operiamo tra Udine, Gorizia e Friuli-Venezia Giulia, con attenzione a sismicita, clima, vincoli paesaggistici e incentivi locali."
+  }
+];
+
+const aboutVisuals = [
+  {
+    src: "/images/home-area-fvg-geodomus.jpg",
+    alt: "Territorio del Friuli Venezia Giulia per progetti di bioedilizia GeoDomus a Udine e Gorizia",
+    label: "FVG: clima, vincoli e contesto locale"
+  },
+  {
+    src: "/images/home-cantiere-legno-geodomus.jpg",
+    alt: "Dettaglio tecnico di struttura in legno per casa prefabbricata in Friuli Venezia Giulia",
+    label: "Controllo posa e dettagli di involucro"
+  },
+  {
+    src: "/images/home-fotovoltaico-tetto-geodomus.jpg",
+    alt: "Verifica del tetto per impianto fotovoltaico a Udine e Gorizia",
+    label: "Tetto, orientamento e ombre"
   }
 ];
 
@@ -74,6 +93,24 @@ export default function AboutPage() {
               <p className="mt-3 text-sm leading-6 text-graphite/62">{value.text}</p>
             </FadeIn>
           ))}
+        </div>
+      </section>
+      <section className="px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">E-E-A-T visivo</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Competenza tecnica significa guardare il posto, non solo il render.</h2>
+          </FadeIn>
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
+            {aboutVisuals.map((image) => (
+              <FadeIn key={image.src} className="overflow-hidden rounded-lg border border-graphite/10 bg-white shadow-soft">
+                <div className="relative aspect-[4/3]">
+                  <Image src={image.src} alt={image.alt} fill quality={76} sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+                </div>
+                <p className="p-4 text-sm font-semibold leading-6 text-graphite/70">{image.label}</p>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
       <CTA title="Vuoi costruire in bioedilizia senza separare casa e impianti?" text="Partiamo da terreno, vincoli, clima, fabbisogno energetico e obiettivi prima di formulare una proposta." />
