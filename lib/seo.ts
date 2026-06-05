@@ -66,3 +66,18 @@ export function serviceJsonLd(name: string, description: string, path: string) {
     url: `${site.url}${path}`
   };
 }
+
+export function breadcrumbJsonLd(items: { label: string; href?: string }[]) {
+  const list = [{ label: "Home", href: "/" }, ...items];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: list.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      item: `${site.url}${item.href ?? ""}`
+    }))
+  };
+}

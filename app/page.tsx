@@ -182,6 +182,14 @@ const targetBlocks = [
   }
 ];
 
+const localSeoLinks = [
+  { label: "Case prefabbricate in legno Gorizia", href: "/case-prefabbricate-legno-gorizia" },
+  { label: "Fotovoltaico Gorizia", href: "/fotovoltaico-gorizia" },
+  { label: "Bioedilizia Udine", href: "/bioedilizia-udine" },
+  { label: "Bioedilizia Gorizia", href: "/bioedilizia-gorizia" },
+  { label: "Riqualificazione energetica Udine", href: "/riqualificazione-energetica-udine" }
+];
+
 const homeFaqs = [
   {
     question: "GeoDomus è una nuova società: perché dovrei fidarmi?",
@@ -549,6 +557,22 @@ export default function HomePage() {
               <FadeIn key={faq.question} className="rounded-lg border border-graphite/10 bg-warm p-6">
                 <h3 className="text-2xl font-semibold tracking-tight">{faq.question}</h3>
                 <p className="mt-3 leading-8 text-graphite/65">{faq.answer}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-stone/55 px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <FadeIn className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-forest">Zone e servizi</p>
+            <h2 className="mt-4 text-5xl font-semibold tracking-tight lg:text-7xl">Approfondimenti locali per Udine e Gorizia.</h2>
+          </FadeIn>
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+            {localSeoLinks.map((item) => (
+              <FadeIn key={item.href} className="rounded-lg border border-graphite/10 bg-white p-5 shadow-soft">
+                <Link href={item.href} className="font-semibold leading-7 hover:text-forest">{item.label}</Link>
               </FadeIn>
             ))}
           </div>
